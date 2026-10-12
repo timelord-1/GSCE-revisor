@@ -1,12 +1,12 @@
 # Trilogy Revision
 
-An offline desktop revision app for **AQA GCSE Combined Science: Trilogy (8464)**, with **617 independently authored flashcards** across Biology, Chemistry and Physics. Each subject is divided into Paper 1, Paper 2 and the relevant AQA topics.
+An offline desktop revision app for **AQA GCSE Combined Science: Trilogy (8464)**, with **641 independently authored flashcards** across Biology, Chemistry and Physics. Each subject is divided into Paper 1, Paper 2 and the relevant AQA topics.
 
 ![Trilogy Revision dashboard](docs/dashboard.png)
 
 ## Download and run
 
-Download `Trilogy-Revision-1.0.2-Windows-x64.exe` from this repository's **Releases** page when the release build has completed. It is a portable Windows x64 executable: run it without installing Node.js or other dependencies. The application is unsigned; no signing certificate has been supplied. It requires a supported Windows version compatible with Electron (Windows 10 or later).
+Download `Trilogy-Revision-1.1.0-Windows-x64.exe` from this repository's **Releases** page when the release build has completed. It is a portable Windows x64 executable: run it without installing Node.js or other dependencies. The application is unsigned; no signing certificate has been supplied. It requires a supported Windows version compatible with Electron (Windows 10 or later).
 
 The release workflow builds on Windows and uploads the executable and a SHA-256 checksum. An executable produced locally on Linux is also available in the development environment's `dist/` directory. **Building the Windows artifact does not establish that it has been run on Windows.** See the release status in GitHub Actions; an unfinished or failed workflow does not mean an uploaded release exists.
 
@@ -17,9 +17,13 @@ The release workflow builds on Windows and uploads the executable and a SHA-256 
 3. Review a whole paper or choose a topic. Think of your answer before revealing the concise marking points.
 4. Rate your recall: **Again / Hard / Good / Easy**. Difficult cards return sooner; well-remembered cards get longer intervals.
 
-Space reveals an answer. Keys 1–4 rate it. Use **Practice all** for an unscheduled pass without changing any intervals. Search finds cards in the selected paper. **Undo last rating** restores the previous schedule and review count.
+Space reveals an answer; press Space again to rate **Good** and advance. Keys 1–4 choose a rating. Use **Practice all** for an unscheduled pass without changing any intervals. Search finds cards in the selected paper or custom deck. **Undo last rating** restores the previous schedule and review count.
 
 The default is 20 new cards per local calendar day across all subjects, configurable from 0–200 in Settings. Due reviews are not capped. New-card limits do not prevent unscheduled practice. Cards due during an open session become available as their learning delay expires.
+
+Enable **Include application questions** in Settings to study scenario, calculation and data questions (off by default).
+
+Use **Manage custom decks** to create named selections across subjects, papers and topics, or select individual cards. Edit or delete selections later. Card schedules are shared with the subject decks; deleting a custom deck keeps progress. Custom decks are included in backups and retained when resetting progress.
 
 ## How scheduling works
 
@@ -46,7 +50,9 @@ The audit corrected mixed-section tier boundaries, separated Foundation definiti
 
 This verifies alignment with the **supplied AQA snapshot**, not unseen later website changes. Section coverage is not a claim that flashcards cover every possible exam question. Mathematical application, drawing diagrams, interpreting unfamiliar graphs and supervised practical work still need exam and classroom practice.
 
-Official references (not reproduced in the repository):
+The `Application questions` directory contains 25 user-supplied PDFs (24 separate-science papers/mark schemes and the 8464 specification). All 952 pages were extracted and reviewed in tracked batches before card changes. Separate-only questions were excluded; one original Biology photograph is absent for copyright reasons and was reported. See [PDF inventory and analysis](docs/PDF-ANALYSIS.md) and [machine-readable checks](docs/pdf-analysis.json). The PDFs are not bundled with the executable.
+
+Official references:
 
 - [AQA Combined Science: Trilogy specification](https://www.aqa.org.uk/subjects/science/gcse/combined-science-trilogy-8464/specification)
 - [PDF linked by the supplied AQA webpage](https://cdn.sanity.io/files/p28bar15/green/a18ef3788335dcf75e16c61df6a5149710ec04e8.pdf)
@@ -90,9 +96,9 @@ The packaged renderer uses a restrictive content-security policy, sandboxing, no
 Pushing a `v*` tag triggers `.github/workflows/release.yml` on GitHub. It runs the unit checks, builds a Windows x64 portable executable and publishes it with a checksum using the repository-scoped Actions `GITHUB_TOKEN` and `contents: write`. It exercises the packaged app on Windows before publication and can also be run manually for an existing tag.
 
 ```sh
-git tag -a v1.0.2 -m "Trilogy Revision 1.0.2"
+git tag -a v1.1.0 -m "Trilogy Revision 1.1.0"
 git push origin main
-git push origin v1.0.2
+git push origin v1.1.0
 ```
 
 Do not claim publication until the release and its assets are visible on GitHub. If Actions is disabled or organisation policy restricts release writes, enable the workflow's permissions or upload the already-built executable through Releases.

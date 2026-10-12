@@ -1,20 +1,22 @@
-## Trilogy Revision 1.0.2 — specification audit
+## Trilogy Revision 1.1.0
 
-Offline revision for AQA GCSE Combined Science: Trilogy (8464), now audited against the complete specification embedded in the saved AQA webpage provided by the user.
+Offline AQA GCSE Combined Science: Trilogy (8464) revision.
 
-- **617 cards** across 24 topics and six papers, with precise AQA section references on every card.
-- Cards mapped to all 225 subject-content sections and all 21 required practical activities.
-- Corrected Foundation/Higher boundaries for hormone interactions, particle-model limitations, electrolysis, refraction and motion graphs; gamma-ray production is correctly available to both tiers.
-- Added the Higher-tier transformer power equation explicitly required by the supplied page; excluded separate-science turns ratios, generator theory and unneeded commutator detail.
-- Added missing core knowledge, calculations, practical precision and two diagram cards.
-- Existing card IDs and backup format are retained, so previous study progress remains compatible.
+- **641 original cards** across six papers and 24 topics; all 225 subject-content sections and 21 required practicals mapped.
+- **Space twice:** reveal, then rate Good and advance. Keys 1–4 and Undo remain available.
+- **Application questions in Settings:** off by default; enable scenarios/calculations for study and search.
+- **Custom study decks:** save named card selections across subjects/papers/topics; edit, delete and back up them. Progress stays shared with the subject decks.
+- Added 24 original application scenarios after reviewing every PDF in `Application questions`.
+- Existing card IDs and legacy progress backups remain compatible.
 
-### Windows download
+### Reference review
 
-Download `Trilogy-Revision-1.0.2-Windows-x64.exe` and run it on Windows 10 or later (x64). No Node.js installation is required. The executable is portable and unsigned. `SHA256SUMS.txt` records its checksum.
+The folder contains **25 PDFs**, not 19: 24 separate-science papers/mark schemes plus the Combined specification. All 952 pages were extracted with two agreeing extractors and rendered before flashcard changes. Tracked batch findings, source hashes and exclusions are in `docs/PDF-ANALYSIS.md` and `docs/pdf-analysis.json`.
 
-### Validation
+Separate-only content was excluded using qualification 8464. Biology 2024 Paper 1 page 16 omits Figure 3 in the supplied original for copyright reasons; photograph-dependent content was not used. Answers are independently authored marking points, not official mark schemes or guaranteed marks. PDFs are not included in the app download.
 
-17 scheduling/content checks and browser interaction tests pass. The release workflow builds on Windows and exercises the packaged app (load a card, reveal its answer and save a scheduled review) before publication.
+### Windows download and checks
 
-The audit applies to the supplied AQA snapshot, not unseen later revisions. Answers are original concise marking points, not official mark schemes. Section coverage does not replace exam application, diagram drawing or supervised practical work. See `docs/COVERAGE.md` and `docs/SPECIFICATION-MAP.md` for the findings and exact references.
+Run `Trilogy-Revision-1.1.0-Windows-x64.exe` on Windows 10 or later (x64); no Node.js installation needed. Portable, unsigned executable; checksum in `SHA256SUMS.txt`.
+
+20 unit/content checks and browser interaction checks pass, including keyboard scheduling, application filtering, custom deck creation/editing/deletion, persistence and backup round-trip. The release workflow builds and smoke-tests the packaged app on Windows before uploading it.

@@ -1,4 +1,3 @@
-/* Independently authored for AQA Combined Science: Trilogy (8464). */
 const DECK = {
   "version": 1,
   "qualification": "AQA GCSE Combined Science: Trilogy (8464)",
@@ -3289,7 +3288,7 @@ const DECK = {
         "Moles Mg = 12/24 = 0.5 mol; mass MgO = 0.5 × 40 = 20 g."
       ],
       "tier": "higher",
-      "kind": "knowledge",
+      "kind": "application",
       "specRefs": [
         "5.3.2.2"
       ]
@@ -4972,7 +4971,7 @@ const DECK = {
         "Eₖ = ½ × 2 × 3² = 9 J."
       ],
       "tier": "all",
-      "kind": "knowledge",
+      "kind": "application",
       "specRefs": [
         "6.1.1.2"
       ]
@@ -5445,7 +5444,7 @@ const DECK = {
         "E = Pt = 100 × 60 = 6000 J."
       ],
       "tier": "all",
-      "kind": "knowledge",
+      "kind": "application",
       "specRefs": [
         "6.2.4.2"
       ]
@@ -6495,7 +6494,7 @@ const DECK = {
         "v = fλ = 50 × 4 = 200 m/s."
       ],
       "tier": "all",
-      "kind": "knowledge",
+      "kind": "application",
       "specRefs": [
         "6.6.1.2"
       ]
@@ -7139,7 +7138,7 @@ const DECK = {
         "This is one order of magnitude larger."
       ],
       "tier": "all",
-      "kind": "knowledge",
+      "kind": "application",
       "specRefs": [
         "4.1.1.1"
       ]
@@ -7211,7 +7210,7 @@ const DECK = {
         "Percentage change = 0.6 ÷ 3.0 × 100 = +20%; net water entered by osmosis."
       ],
       "tier": "all",
-      "kind": "knowledge",
+      "kind": "application",
       "specRefs": [
         "4.1.3.2"
       ]
@@ -7421,7 +7420,7 @@ const DECK = {
         "State the gas-volume unit and time unit together."
       ],
       "tier": "all",
-      "kind": "knowledge",
+      "kind": "application",
       "specRefs": [
         "4.4.1.2"
       ]
@@ -7590,7 +7589,7 @@ const DECK = {
         "Median = middle ordered value = 3; mode = most frequent value = 3."
       ],
       "tier": "all",
-      "kind": "knowledge",
+      "kind": "application",
       "specRefs": [
         "4.7.2.1"
       ]
@@ -7921,7 +7920,7 @@ const DECK = {
         "0.50 × 6.02 × 10²³ = 3.01 × 10²³ particles; state whether they are atoms, molecules or ions."
       ],
       "tier": "higher",
-      "kind": "knowledge",
+      "kind": "application",
       "specRefs": [
         "5.3.2.1"
       ]
@@ -7935,7 +7934,7 @@ const DECK = {
         "Mass = concentration × volume = 20 × 0.250 = 5.0 g."
       ],
       "tier": "all",
-      "kind": "knowledge",
+      "kind": "application",
       "specRefs": [
         "5.3.2.5"
       ]
@@ -8134,7 +8133,7 @@ const DECK = {
         "Measure both distances from the same baseline; Rf has no units."
       ],
       "tier": "all",
-      "kind": "knowledge",
+      "kind": "application",
       "specRefs": [
         "5.8.1.3"
       ]
@@ -8348,7 +8347,7 @@ const DECK = {
         "Iₛ = 460 ÷ 23 = 20 A. Output power equals input power for an ideal transformer."
       ],
       "tier": "higher",
-      "kind": "knowledge",
+      "kind": "application",
       "specRefs": [
         "6.2.4.3"
       ]
@@ -8418,7 +8417,7 @@ const DECK = {
         "Alpha would be stopped; gamma would pass through with too little change in count."
       ],
       "tier": "all",
-      "kind": "knowledge",
+      "kind": "application",
       "specRefs": [
         "6.4.2.1"
       ]
@@ -8432,7 +8431,7 @@ const DECK = {
         "Atomic number Z = 92 − 2 = 90. Both mass number and charge are conserved including the alpha particle."
       ],
       "tier": "all",
-      "kind": "knowledge",
+      "kind": "application",
       "specRefs": [
         "6.4.2.2"
       ]
@@ -8446,7 +8445,7 @@ const DECK = {
         "Use the same half-life for each further halving, allowing for random measurement variation."
       ],
       "tier": "all",
-      "kind": "knowledge",
+      "kind": "application",
       "specRefs": [
         "6.4.2.3"
       ]
@@ -8544,7 +8543,7 @@ const DECK = {
         "20 × 0.50 = 10 m."
       ],
       "tier": "all",
-      "kind": "knowledge",
+      "kind": "application",
       "specRefs": [
         "6.5.4.3.2"
       ]
@@ -8558,7 +8557,7 @@ const DECK = {
         "Work = force × distance, so force = 200,000 ÷ 50 = 4000 N, opposing motion. Assume all this energy is removed by the braking force."
       ],
       "tier": "higher",
-      "kind": "knowledge",
+      "kind": "application",
       "specRefs": [
         "6.5.4.3.4"
       ]
@@ -8726,7 +8725,7 @@ const DECK = {
         "One of four boxes is aa, so the recessive-phenotype probability is ¼ (25%)."
       ],
       "tier": "all",
-      "kind": "knowledge",
+      "kind": "application",
       "specRefs": [
         "4.6.1.4"
       ],
@@ -8742,7 +8741,7 @@ const DECK = {
         "B represents the overall energy decrease, not the activation energy. Products are lower in energy, so the reaction is exothermic."
       ],
       "tier": "all",
-      "kind": "knowledge",
+      "kind": "application",
       "specRefs": [
         "5.5.1.2"
       ],
@@ -8763,6 +8762,510 @@ const DECK = {
         "6.6.2.3",
         "6.6.2.4"
       ]
+    },
+    {
+      "id": "application-001",
+      "topic": "4.1",
+      "specRefs": [
+        "4.1.3.2"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A potato cylinder loses mass in concentrated salt solution. Explain why.",
+      "answer": [
+        "The solution outside the cells has a lower water concentration than the cell contents.",
+        "Water moves out by osmosis through partially permeable cell membranes, decreasing mass."
+      ],
+      "examSource": {
+        "qualification": "8461",
+        "paper": "84611H",
+        "year": 2024,
+        "question": "05.2",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-002",
+      "topic": "4.2",
+      "specRefs": [
+        "4.2.2.1"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "An amylase–starch mixture stays blue-black with iodine after heating to 90 °C. Explain the result.",
+      "answer": [
+        "The high temperature denatures amylase; its active site changes shape so starch no longer fits.",
+        "Starch is not broken down, so iodine gives a blue-black result."
+      ],
+      "examSource": {
+        "qualification": "8461",
+        "paper": "84611H",
+        "year": 2025,
+        "question": "02.5",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-003",
+      "topic": "4.4",
+      "specRefs": [
+        "4.4.1.2"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "Pondweed releases 12 bubbles in 50 seconds. Calculate its measured photosynthesis rate.",
+      "answer": [
+        "Rate = bubbles ÷ time = 12 ÷ 50 = 0.24 bubbles/s.",
+        "Bubble counting is an estimate: bubbles can have different volumes."
+      ],
+      "examSource": {
+        "qualification": "8461",
+        "paper": "84611H",
+        "year": 2025,
+        "question": "04.2",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-004",
+      "topic": "4.2",
+      "specRefs": [
+        "4.2.2.1"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A damaged liver produces less bile. Explain why fat digestion may slow down.",
+      "answer": [
+        "Less bile means less emulsification: larger fat droplets provide less surface area for lipase.",
+        "Less alkaline bile also means less neutralisation of stomach acid, so the small intestine may be below the optimum pH for lipase."
+      ],
+      "examSource": {
+        "qualification": "8461",
+        "paper": "84611H",
+        "year": 2025,
+        "question": "07.8",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-005",
+      "topic": "4.6",
+      "specRefs": [
+        "4.6.1.4"
+      ],
+      "tier": "higher",
+      "kind": "application",
+      "question": "A heterozygous parent (Aa) is crossed with an aa parent. A is dominant. What proportion of offspring show the dominant phenotype?",
+      "answer": [
+        "Gametes: A or a from Aa; a from aa. Offspring genotypes: Aa, Aa, aa, aa.",
+        "Two of four outcomes show the dominant phenotype: probability ½ = 50%."
+      ],
+      "examSource": {
+        "qualification": "8461",
+        "paper": "84612H",
+        "year": 2024,
+        "question": "06.3",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-006",
+      "topic": "4.7",
+      "specRefs": [
+        "4.7.3.3"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "Explain how removing and burning peat can reduce biodiversity locally and globally.",
+      "answer": [
+        "Removing peat destroys a specialised habitat, reducing local populations and species diversity.",
+        "Burning peat releases carbon dioxide, increasing global warming and changing habitats; some species cannot survive the changes."
+      ],
+      "examSource": {
+        "qualification": "8461",
+        "paper": "84612H",
+        "year": 2025,
+        "question": "05.3",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-007",
+      "topic": "4.5",
+      "specRefs": [
+        "4.5.2"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A ruler-drop reaction-time investigation uses a different starting ruler position on each trial. Suggest an improvement and explain why.",
+      "answer": [
+        "Align the same ruler mark with the catching hand before every drop.",
+        "This controls the starting position, so differences in measured distance reflect the response rather than the setup."
+      ],
+      "examSource": {
+        "qualification": "8461",
+        "paper": "84612H",
+        "year": 2025,
+        "question": "07.3",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-008",
+      "topic": "4.5",
+      "specRefs": [
+        "4.5.3.2"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "Two diabetes drugs were tested for different durations; only one trial had a placebo group. Why is a direct comparison limited?",
+      "answer": [
+        "Different durations could affect the size of the measured response, so the methods are not directly comparable.",
+        "The trial without a placebo cannot distinguish the drug effect from changes occurring without the drug."
+      ],
+      "examSource": {
+        "qualification": "8461",
+        "paper": "84612H",
+        "year": 2025,
+        "question": "09.3",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-009",
+      "topic": "5.4",
+      "specRefs": [
+        "5.4.2.3"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A student adds excess copper oxide to warm dilute sulfuric acid. Why filter before crystallising the salt?",
+      "answer": [
+        "Excess insoluble copper oxide remains after the acid has reacted.",
+        "Filtration removes the solid, leaving copper sulfate solution to crystallise."
+      ],
+      "examSource": {
+        "qualification": "8462",
+        "paper": "84621H",
+        "year": 2024,
+        "question": "01.3",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-010",
+      "topic": "5.5",
+      "specRefs": [
+        "5.5.1.1"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "Why does a polystyrene cup improve a reaction temperature-change measurement compared with a glass beaker?",
+      "answer": [
+        "Polystyrene is a better thermal insulator.",
+        "Less energy transfers to the surroundings, so the measured temperature change is closer to the reaction’s true temperature change."
+      ],
+      "examSource": {
+        "qualification": "8462",
+        "paper": "84621H",
+        "year": 2024,
+        "question": "04.3",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-011",
+      "topic": "5.2",
+      "specRefs": [
+        "5.2.2.7"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "Explain why adding a different metal can make an alloy harder than the pure metal.",
+      "answer": [
+        "Atoms of different sizes distort the regular layers.",
+        "The layers cannot slide over each other as easily."
+      ],
+      "examSource": {
+        "qualification": "8462",
+        "paper": "84621H",
+        "year": 2024,
+        "question": "07.2",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-012",
+      "topic": "5.4",
+      "specRefs": [
+        "5.4.3.3"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "Oxygen forms at a carbon anode during aluminium extraction. Explain why the anode must be replaced.",
+      "answer": [
+        "The oxygen reacts with the carbon anode to form carbon dioxide.",
+        "Carbon is used up, so the anode wears away."
+      ],
+      "examSource": {
+        "qualification": "8462",
+        "paper": "84621H",
+        "year": 2025,
+        "question": "06.5",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-013",
+      "topic": "5.10",
+      "specRefs": [
+        "5.10.1.2"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "After evaporating a water sample, how can a student check all the water has been removed?",
+      "answer": [
+        "Heat, allow to cool and reweigh; repeat until the mass is constant.",
+        "A constant mass indicates no more water is being removed."
+      ],
+      "examSource": {
+        "qualification": "8462",
+        "paper": "84622H",
+        "year": 2025,
+        "question": "01.3",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-014",
+      "topic": "5.8",
+      "specRefs": [
+        "5.8.1.3"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A chromatogram spot moves 3.6 cm and has Rf = 0.60. Calculate the solvent-front distance.",
+      "answer": [
+        "Rf = spot distance ÷ solvent-front distance.",
+        "Solvent-front distance = 3.6 ÷ 0.60 = 6.0 cm; measure both distances from the baseline."
+      ],
+      "examSource": {
+        "qualification": "8462",
+        "paper": "84622H",
+        "year": 2024,
+        "question": "04.4",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-015",
+      "topic": "5.6",
+      "specRefs": [
+        "5.6.1.1"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A flask loses mass while hydrogen peroxide decomposes. Explain why this can measure reaction rate.",
+      "answer": [
+        "Oxygen gas is produced and escapes, decreasing the measured mass.",
+        "Mean rate = mass lost ÷ time taken, in g/s."
+      ],
+      "examSource": {
+        "qualification": "8462",
+        "paper": "84622H",
+        "year": 2025,
+        "question": "08.1",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-016",
+      "topic": "5.6",
+      "specRefs": [
+        "5.6.2.7"
+      ],
+      "tier": "higher",
+      "kind": "application",
+      "question": "For A(g) + B(g) ⇌ C(g), explain how increasing pressure changes the equilibrium position.",
+      "answer": [
+        "There are fewer gas molecules on the product side: one rather than two.",
+        "Increasing pressure shifts equilibrium towards C, opposing the pressure increase and increasing the equilibrium proportion of C."
+      ],
+      "examSource": {
+        "qualification": "8462",
+        "paper": "84622H",
+        "year": 2025,
+        "question": "09.2",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-017",
+      "topic": "6.1",
+      "specRefs": [
+        "6.1.1.3"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A 0.50 kg block receives 4500 J and warms by 20 °C. Calculate its specific heat capacity, assuming no energy loss.",
+      "answer": [
+        "ΔE = mcΔθ, so c = ΔE ÷ (mΔθ).",
+        "c = 4500 ÷ (0.50 × 20) = 450 J/(kg °C)."
+      ],
+      "examSource": {
+        "qualification": "8463",
+        "paper": "84631H",
+        "year": 2025,
+        "question": "02.2",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-018",
+      "topic": "6.2",
+      "specRefs": [
+        "6.2.4.2"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A 6.0 V battery transfers 12 kJ. Calculate the charge flow.",
+      "answer": [
+        "12 kJ = 12 000 J. E = QV, so Q = E ÷ V.",
+        "Q = 12 000 ÷ 6.0 = 2000 C."
+      ],
+      "examSource": {
+        "qualification": "8463",
+        "paper": "84631H",
+        "year": 2025,
+        "question": "06.2",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-019",
+      "topic": "6.3",
+      "specRefs": [
+        "6.3.1.1"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "An unloaded balance reads +0.03 g. It reads 2.48 g with a sample. Find the corrected sample mass.",
+      "answer": [
+        "Subtract the positive zero error from the measured mass.",
+        "Corrected mass = 2.48 − 0.03 = 2.45 g."
+      ],
+      "examSource": {
+        "qualification": "8463",
+        "paper": "84631H",
+        "year": 2024,
+        "question": "07.4",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-020",
+      "topic": "6.4",
+      "specRefs": [
+        "6.4.2.3"
+      ],
+      "tier": "higher",
+      "kind": "application",
+      "question": "A sample’s count rate falls from 320 to 40 counts/s in 18 days. Background is negligible. Calculate the half-life.",
+      "answer": [
+        "320 → 160 → 80 → 40 is three half-lives.",
+        "Half-life = 18 ÷ 3 = 6 days."
+      ],
+      "examSource": {
+        "qualification": "8463",
+        "paper": "84631H",
+        "year": 2025,
+        "question": "07.4",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-021",
+      "topic": "6.5",
+      "specRefs": [
+        "6.5.3"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A spring extends by 0.050 m under a 3.0 N force, within its proportional region. Calculate its spring constant.",
+      "answer": [
+        "F = ke, so k = F ÷ e.",
+        "k = 3.0 ÷ 0.050 = 60 N/m."
+      ],
+      "examSource": {
+        "qualification": "8463",
+        "paper": "84632H",
+        "year": 2025,
+        "question": "02.7",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-022",
+      "topic": "6.5",
+      "specRefs": [
+        "6.5.4.3.2"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "Explain why a longer driver reaction time increases stopping distance at the same speed.",
+      "answer": [
+        "The vehicle travels farther before braking starts, increasing thinking distance.",
+        "Stopping distance = thinking distance + braking distance; with braking distance unchanged, stopping distance increases."
+      ],
+      "examSource": {
+        "qualification": "8463",
+        "paper": "84632H",
+        "year": 2024,
+        "question": "07.5",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-023",
+      "topic": "6.6",
+      "specRefs": [
+        "6.6.1.2"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A wave travels at 120 m/s with frequency 40 Hz. Calculate its wavelength.",
+      "answer": [
+        "v = fλ, so λ = v ÷ f.",
+        "λ = 120 ÷ 40 = 3.0 m."
+      ],
+      "examSource": {
+        "qualification": "8463",
+        "paper": "84632H",
+        "year": 2024,
+        "question": "04.5",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
+    },
+    {
+      "id": "application-024",
+      "topic": "6.7",
+      "specRefs": [
+        "6.7.2.2"
+      ],
+      "tier": "higher",
+      "kind": "application",
+      "question": "A wire at right angles to a magnetic field carries 2.0 A. B = 0.40 T and wire length in the field = 0.060 m. Calculate the magnetic force.",
+      "answer": [
+        "F = BIl = 0.40 × 2.0 × 0.060.",
+        "F = 0.048 N."
+      ],
+      "examSource": {
+        "qualification": "8463",
+        "paper": "84632H",
+        "year": 2025,
+        "question": "07.2",
+        "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
+      }
     }
   ],
   "specification": {

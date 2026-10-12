@@ -54,3 +54,9 @@ No separate-science space physics, monoclonal antibodies, detailed eye/brain top
 Foundation cards exclude the identified Higher-only clauses. Higher includes Foundation material. Completing/interpreting a supplied Punnett square is both-tier; constructing a new genetic cross is Higher-only, as annotated in 4.6.1.4.
 
 Automated checks verify that all cards have valid references, all 225 subject sections and all 21 practicals have mapped cards, wholly Higher sections contain no Foundation cards, selected mixed-section boundaries remain correct, exclusions are maintained and previous card IDs survive. They support the manual scientific review; they do not independently prove every answer or award marks. Answers are original concise revision points, not official AQA mark schemes, and require relevant selection, units and working for the actual question.
+
+## Version 1.1.0 reference review
+
+All 25 PDFs in `Application questions` were accessible before flashcard edits: 952 pages, two agreeing text extractors and rendered page images. The full recursive inventory, seven batch results, SHA-256 hashes and Combined-only exclusions are recorded in [PDF-ANALYSIS.md](PDF-ANALYSIS.md). Biology 2024 Paper 1 omits a copyright photograph in its original page 16; no photograph-dependent cards were added.
+
+24 original application scenarios bring the deck to 641 cards. Together with 19 existing scenario/calculation/diagram cards they form 43 application cards, hidden until enabled in Settings. Custom decks collect built-in AQA cards; they do not introduce unverified course content. All previous card IDs, topic/paper boundaries and 225-section mapping remain intact.
