@@ -1,56 +1,56 @@
-# Trilogy content map
+# AQA Trilogy specification audit
 
-Qualification: AQA GCSE Combined Science: Trilogy (8464). Original revision cards, not an official question bank. Every card has a stable ID, AQA topic reference, tier and practical/knowledge flag in `src/deck.js`.
+The 617-card deck was reviewed against the complete specification embedded in the user-provided saved AQA webpage, `GCSE Science 8464 _ Specification _ AQA.html`, on **12 October 2026**. The visible page shows the introduction, but the saved embedded data includes the subject-content and practical-assessment sections. It was parsed as data; no uploaded scripts were executed.
 
-| Subject | Paper | AQA sections | Topics |
-|---|---|---|---|
-| Biology | 1 | 4.1–4.4 | Cell biology; Organisation; Infection and response; Bioenergetics |
-| Biology | 2 | 4.5–4.7 | Homeostasis and response; Inheritance, variation and evolution; Ecology |
-| Chemistry | 1 | 5.1–5.5 | Atomic structure and the periodic table; Bonding, structure and properties; Quantitative chemistry; Chemical changes; Energy changes |
-| Chemistry | 2 | 5.6–5.10 | Rate and extent of chemical change; Organic chemistry; Chemical analysis; Chemistry of the atmosphere; Using resources |
-| Physics | 1 | 6.1–6.4 | Energy; Electricity; Particle model of matter; Atomic structure |
-| Physics | 2 | 6.5–6.7 | Forces; Waves; Magnetism and electromagnetism |
+Official source: [AQA GCSE Combined Science: Trilogy (8464)](https://www.aqa.org.uk/subjects/science/gcse/science-8464/specification).
 
-## Required practical coverage
+The source file's SHA-256, 225 subject-content section references, section titles, 74 Higher-only cards and mappings for all 21 practical activities are recorded in [SPECIFICATION-MAP.md](SPECIFICATION-MAP.md). Every card cites at least one precise subject-content reference. Practical cards also cite their numbered activity in section 10.2.
 
-Multiple cards can cover one activity. Practical cards summarise methods and controls; they are not a replacement for supervised laboratory work and appropriate risk assessment.
+This audit supersedes the earlier note that official-specification verification was blocked. It establishes alignment with the supplied official-page snapshot; it does not establish that an unseen later revision has been checked. The full copyrighted AQA text and the uploaded webpage are not redistributed in this repository.
 
-| Activity | Topic | Card coverage |
+## Paper organisation
+
+| Subject | Paper 1 | Paper 2 |
 |---|---|---|
-| 1 Microscopy | 4.1 | Preparing and observing onion epidermis |
-| 2 Osmosis | 4.1 | Potato mass change against concentration |
-| 3 Food tests | 4.2 | Iodine, Benedict's, Biuret, Sudan III |
-| 4 Amylase and pH | 4.2 | Starch digestion with buffers and iodine |
-| 5 Photosynthesis | 4.4 | Pondweed, light intensity, oxygen collection |
-| 6 Reaction time | 4.5 | Ruler-drop investigation |
-| 7 Field sampling | 4.7 | Random quadrats, abundance and transects |
-| 8 Soluble salts | 5.4 | Acid and excess insoluble oxide |
-| 9 Electrolysis | 5.4 | Aqueous solution and inert electrodes |
-| 10 Temperature changes | 5.5 | Insulated reaction calorimetry |
-| 11 Reaction rates | 5.6 | Gas volume and disappearing-cross methods |
-| 12 Chromatography | 5.8 | Baseline, solvent front and Rf |
-| 13 Water analysis | 5.10 | pH, dissolved solids and distillation |
-| 14 Specific heat capacity | 6.1 | Heated insulated metal block |
-| 15 Resistance | 6.2 | Wire length and circuit controls |
-| 16 I–V characteristics | 6.2 | Resistor, lamp and diode |
-| 17 Density | 6.3 | Regular/irregular solids and liquids |
-| 18 Force and extension | 6.5 | Spring, measured loads and graph |
-| 19 Force, mass and acceleration | 6.5 | Trolley and controlled variables |
-| 20 Waves | 6.6 | Ripple tank and vibrating solid/string |
-| 21 Infrared radiation | 6.6 | Surface absorption/emission comparisons |
+| Biology | 4.1–4.4: Cell biology; Organisation; Infection and response; Bioenergetics | 4.5–4.7: Homeostasis and response; Inheritance, variation and evolution; Ecology |
+| Chemistry | 5.1–5.5: Atomic structure and periodic table; Bonding; Quantitative chemistry; Chemical changes; Energy changes | 5.6–5.10: Rate and extent; Organic chemistry; Chemical analysis; Atmosphere; Resources |
+| Physics | 6.1–6.4: Energy; Electricity; Particle model; Atomic structure | 6.5–6.7: Forces; Waves; Magnetism and electromagnetism |
 
-## Higher-only labels
+Cards follow the main teaching-topic split in section 2.2. Questions can also draw on fundamental underlying concepts, mathematical skills and practical knowledge; topic boundaries are not absolute limits on an exam question. In particular, Chemistry Paper 2 may draw on sections 5.1–5.3.
 
-52 Higher-only cards. Labels include: photosynthesis limiting-factor interactions; oxygen debt/lactic acid processing; glucagon/negative feedback; menstrual-hormone interactions; fertility treatments; adrenaline/thyroxine; genetic-engineering steps; moles/limiting reactants; electron redox/half-equations; strong and weak acids; bond-energy calculations; quantitative rate tangents; equilibrium shifts; alternative copper extraction; improving efficiency; quantitative half-life fractions; force resolution; curved distance–time tangents; inertial mass; momentum; selected electromagnetic mechanisms/refraction; and the motor effect.
+## Corrections made in this audit
 
-Foundation still includes reading simple inheritance probabilities; constructing more complex genetic crosses requires tier-specific teaching. Cards deliberately avoid titration/molar-concentration calculations, which are separate Chemistry content. Quantitative pressure–volume gas laws and momentum force–time calculations are not added.
+| Content | Result | AQA reference |
+|---|---|---|
+| Generic endocrine negative feedback | Higher-only | 4.5.3.2, 4.5.3.6 |
+| FSH stimulating oestrogen | Moved out of the Foundation definition into Higher hormone interactions | 4.5.3.3 |
+| Simple solid-sphere particle-model limitations | Higher-only; other bonding-diagram limitations remain both-tier | 5.2.2.1 versus 5.2.1.3–5.2.1.4 |
+| Writing the neutralisation ionic equation | Higher-only; Foundation ion-based explanation retained | 5.1.1.1, 5.4.2.4 |
+| Electron gain/loss at electrolysis electrodes | Split from the Foundation ion-movement card into Higher oxidation/reduction cards | 5.4.3.1, 5.4.3.5 |
+| Reaction-rate units in mol/s | Separate Higher card; g/s and cm³/s retained for Foundation | 5.6.1.1 |
+| Circular-motion velocity explanation | Separate Higher card; ordinary velocity definition retained for Foundation | 6.5.4.1.3 |
+| Area under velocity–time graphs | Separate Higher card; gradients and constant velocity retained for Foundation | 6.5.4.1.5 |
+| Refraction explanation using speed and wave fronts | Higher-only; ray-diagram construction retained for both tiers | 6.6.2.2 |
+| Gamma-ray origin in the nucleus | Both tiers; only the electrical-circuit radio mechanism is Higher-only | 6.6.2.3 |
+| Transformer equation | Added **VₚIₚ = VₛIₛ**, Higher-only, as explicitly stated in the supplied page | 6.2.4.3 |
+| Transformer turns-ratio/induction theory | Excluded; not added from separate Physics | No corresponding Trilogy content requirement |
+| Split-ring commutator detail | Removed; motor card explains opposite forces and coil rotation | 6.7.2.3 |
+| Gamma sterilisation as a recalled application | Removed from EM-use card; medical imaging/treatment retained | 6.6.2.4 |
+| Microscopy activity | Plant and animal cells, with labelled drawings and a magnification scale | 4.1.1.2, 10.2.1 |
+| Amylase activity | Explicit 30-second sampling and controlled water-bath temperature | 4.2.2.1, 10.2.4 |
+| Soluble-salt activity | Oxide/carbonate, heating dilute acid, controlled evaporation, filtration and drying | 5.4.2.3, 10.2.8 |
+| Resistance activity | Added combinations in series and parallel as well as wire length | 6.2.1.3, 10.2.15 |
 
-## Circuit-symbol recognition
+## Added coverage
 
-14 original SVG diagrams cover cells, batteries, switches, lamps, resistors, variable resistors, fuses, diodes, LEDs, thermistors, LDRs, ammeters and voltmeters. Diagram cards also give component functions.
+The audit added 117 cards while preserving all 500 existing IDs for saved-progress compatibility. Additions include cell scale and exchange surfaces; lung structure and gas exchange; valve faults; cancer; meristems; practical precision; inheritance and polygenic traits; consumer levels; the first 20 element symbols; Group 1/7 reactions; ionic charges, state symbols and silica; reaction profiles; combustion equations; fossil-fuel/carbonate formation; comparative resource use; LCA; circuit-sensor applications; transformer power balance; heating curves; radiation range and data interpretation; motion-graph area, braking calculations and electromagnetic applications.
 
-## Verification status
+Original SVGs include 14 circuit-symbol cards, a Punnett-square completion card and a reaction-profile interpretation card. Diagrams supplement the deck; they do not replace drawing practice.
 
-Automated checks verify structural organisation, stable identifiers, expected tier labels for selected boundary topics, banned question-topic terms and practical activity coverage. They cannot validate every scientific claim or establish the current official specification's wording.
+## Scope limits and validation
 
-The user-supplied overview was read, and known separate-science additions were removed. Access to the full AQA PDF is currently blocked by the environment network proxy. Before asserting exhaustive or fully current specification coverage, check the full official 8464 PDF line by line, especially Higher-tier annotations and precise learning-outcome boundaries. Do not treat the supplied overview as the full specification.
+No separate-science space physics, monoclonal antibodies, detailed eye/brain topics, plant hormones, transition-metal or nanoparticle properties, titrations, percentage yield/atom economy, fuel cells, separate organic reactions, Haber-process production, food production, nuclear fission/fusion, moments, pressure equations, generators or transformer turns-ratio equations are taught. Polymer structure and alkene feedstock uses are included; detailed polymerisation chemistry is not.
+
+Foundation cards exclude the identified Higher-only clauses. Higher includes Foundation material. Completing/interpreting a supplied Punnett square is both-tier; constructing a new genetic cross is Higher-only, as annotated in 4.6.1.4.
+
+Automated checks verify that all cards have valid references, all 225 subject sections and all 21 practicals have mapped cards, wholly Higher sections contain no Foundation cards, selected mixed-section boundaries remain correct, exclusions are maintained and previous card IDs survive. They support the manual scientific review; they do not independently prove every answer or award marks. Answers are original concise revision points, not official AQA mark schemes, and require relevant selection, units and working for the actual question.

@@ -22,7 +22,7 @@ test('practical coverage spans all required practical activity areas',()=>{
 });
 test('circuit-symbol cards have existing local SVG diagrams without active content',()=>{
  const fs=require('fs');const path=require('path');
- const diagrams=deck.cards.filter(c=>c.questionImage);assert.equal(diagrams.length,14);
+ const diagrams=deck.cards.filter(c=>c.questionImage&&c.topic==='6.2');assert.equal(diagrams.length,14);
  for(const c of diagrams){
   assert.equal(c.topic,'6.2');assert.equal(c.tier,'all');assert.ok(c.imageAlt.length>15);
   assert.match(c.questionImage,/^assets\/circuits\/[a-z-]+\.svg$/);

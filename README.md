@@ -1,12 +1,12 @@
 # Trilogy Revision
 
-An offline desktop revision app for **AQA GCSE Combined Science: Trilogy (8464)**, with **500 independently authored flashcards** across Biology, Chemistry and Physics. Each subject is divided into Paper 1, Paper 2 and the relevant AQA topics.
+An offline desktop revision app for **AQA GCSE Combined Science: Trilogy (8464)**, with **617 independently authored flashcards** across Biology, Chemistry and Physics. Each subject is divided into Paper 1, Paper 2 and the relevant AQA topics.
 
 ![Trilogy Revision dashboard](docs/dashboard.png)
 
 ## Download and run
 
-Download `Trilogy-Revision-1.0.1-Windows-x64.exe` from this repository's **Releases** page when the release build has completed. It is a portable Windows x64 executable: run it without installing Node.js or other dependencies. The application is unsigned; no signing certificate has been supplied. It requires a supported Windows version compatible with Electron (Windows 10 or later).
+Download `Trilogy-Revision-1.0.2-Windows-x64.exe` from this repository's **Releases** page when the release build has completed. It is a portable Windows x64 executable: run it without installing Node.js or other dependencies. The application is unsigned; no signing certificate has been supplied. It requires a supported Windows version compatible with Electron (Windows 10 or later).
 
 The release workflow builds on Windows and uploads the executable and a SHA-256 checksum. An executable produced locally on Linux is also available in the development environment's `dist/` directory. **Building the Windows artifact does not establish that it has been run on Windows.** See the release status in GitHub Actions; an unfinished or failed workflow does not mean an uploaded release exists.
 
@@ -40,17 +40,20 @@ Export a JSON backup from Settings before reinstalling, clearing storage or movi
 
 This app targets **Combined Science: Trilogy**, not separate/triple GCSEs. Answers are original concise key points, not copied or official AQA mark schemes. Include only points relevant to the exam question and show calculation working and units; no deck can guarantee marks.
 
-The supplied `AQA_GCSE_Combined_Science_Trilogy_Specification.md` was used as a topic checklist. It incorrectly included transition-metal properties and nanoparticle properties; both were excluded. The deck includes required practical methods, equations and Higher labels. Some mathematical skills and exam-question application require additional practice beyond flashcards.
+The initial course outline was followed by the full saved AQA specification webpage supplied by the user. Its embedded page data contains the complete subject-content and practical sections. The deck was audited against that snapshot on 12 October 2026: all 225 subject-content sections have mapped cards, and all 21 required practical activities are represented. Each card displays its precise specification references.
 
-**Current limitation:** this environment blocks access to AQA's website/PDF. Direct line-by-line verification against the current full official specification is still pending. The app displays this limitation in Content & coverage. Topic-structure and exclusion tests pass, but they are not a substitute for a full academic content review.
+The audit corrected mixed-section tier boundaries, separated Foundation definitions from Higher explanations, added missing revision coverage and removed unneeded separate-science details. The Higher-tier transformer **power-balance** equation VₚIₚ = VₛIₛ is included because section 6.2.4.3 of the supplied AQA page explicitly requires it. Transformer turns-ratio equations and induction/generator theory are excluded.
+
+This verifies alignment with the **supplied AQA snapshot**, not unseen later website changes. Section coverage is not a claim that flashcards cover every possible exam question. Mathematical application, drawing diagrams, interpreting unfamiliar graphs and supervised practical work still need exam and classroom practice.
 
 Official references (not reproduced in the repository):
 
 - [AQA Combined Science: Trilogy specification](https://www.aqa.org.uk/subjects/science/gcse/combined-science-trilogy-8464/specification)
-- [AQA 8464 specification PDF](https://filestore.aqa.org.uk/resources/science/specifications/AQA-8464-SP-2016.PDF)
-- [Topic coverage and practical mapping](docs/COVERAGE.md)
+- [PDF linked by the supplied AQA webpage](https://cdn.sanity.io/files/p28bar15/green/a18ef3788335dcf75e16c61df6a5149710ec04e8.pdf)
+- [Audit findings and topic coverage](docs/COVERAGE.md)
+- [Every specification section and its cards](docs/SPECIFICATION-MAP.md)
 
-No space physics; monoclonal antibodies; detailed brain/eye or plant-hormone topics; transition-metal or nanoparticle properties; titrations; percentage yield/atom economy; fuel cells; separate organic reactions; Haber-process production; food-production topic; nuclear fission/fusion; moments; pressure calculations; generators; or transformer calculations. **Fullerenes/graphene, cracking, and qualitative National Grid transformer use are included because they belong to Trilogy.**
+No space physics; monoclonal antibodies; detailed brain/eye or plant-hormone topics; transition-metal or nanoparticle properties; titrations; percentage yield/atom economy; fuel cells; separate organic reactions; Haber-process production; food-production topic; nuclear fission/fusion; moments; pressure calculations; generators; or transformer turns-ratio calculations. **Fullerenes/graphene, cracking, qualitative National Grid transformer use and the specified Higher-tier transformer power equation belong to Trilogy and are included.**
 
 ## Develop
 
@@ -73,7 +76,7 @@ npm run serve
 Open port 4173 locally. The HTTP server binds only to loopback; it is a development helper, not a production service.
 
 ```sh
-npm test          # scheduler, backup validation, topic/tier/exclusion/practical tests
+npm test          # scheduler, backup validation, source coverage, tier and scope checks
 npm run test:ui   # browser interaction, persistence, backup round-trip, responsive layout
 npm run build:win
 ```
@@ -87,9 +90,9 @@ The packaged renderer uses a restrictive content-security policy, sandboxing, no
 Pushing a `v*` tag triggers `.github/workflows/release.yml` on GitHub. It runs the unit checks, builds a Windows x64 portable executable and publishes it with a checksum using the repository-scoped Actions `GITHUB_TOKEN` and `contents: write`. It exercises the packaged app on Windows before publication and can also be run manually for an existing tag.
 
 ```sh
-git tag -a v1.0.1 -m "Trilogy Revision 1.0.1"
+git tag -a v1.0.2 -m "Trilogy Revision 1.0.2"
 git push origin main
-git push origin v1.0.1
+git push origin v1.0.2
 ```
 
 Do not claim publication until the release and its assets are visible on GitHub. If Actions is disabled or organisation policy restricts release writes, enable the workflow's permissions or upload the already-built executable through Releases.
