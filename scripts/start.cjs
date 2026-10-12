@@ -1,0 +1,9 @@
+const { spawn } = require('child_process');
+const path = require('path');
+const os = require('os');
+process.env.NODE_USE_ENV_PROXY ??= '1';
+process.env.electron_config_cache = path.join(os.tmpdir(), 'trilogy-build-cache', 'electron');
+const electron = require('electron');
+const child = spawn(electron, ['.', ...process.argv.slice(2)], { stdio: 'inherit' });
+child.on('error', error => { console.error(error.message); process.exit(1); });
+child.on('exit', code => process.exit(code ?? 1));

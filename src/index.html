@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'">
+  <title>Trilogy Revision</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <button class="brand" id="home" aria-label="Trilogy Revision home"><span class="brand-icon">T<span>³</span></span><span>trilogy<span class="brand-sub">SCIENCE, MADE STICK.</span></span></button>
+    <div class="sidebar-label">YOUR SUBJECTS</div>
+    <nav id="subject-nav" aria-label="Subjects"></nav>
+    <div class="sidebar-label paper-label">EXAM PAPER</div>
+    <div class="paper-switch" role="group" aria-label="Paper"><button data-paper="1" class="selected">Paper 1</button><button data-paper="2">Paper 2</button></div>
+    <nav id="topic-nav" aria-label="Topics"></nav>
+    <div class="sidebar-bottom"><span class="offline-dot"></span> Offline & on your device <button id="help" aria-label="About the app">?</button></div>
+  </aside>
+  <main>
+    <header class="topbar"><span class="qualification">AQA <span>COMBINED SCIENCE · 8464</span></span><div class="top-actions"><label class="tier-label">Tier <select id="tier"><option value="higher">Higher</option><option value="foundation">Foundation</option></select></label><button id="settings" class="icon-button" aria-label="Settings and backup">⚙</button></div></header>
+    <div class="main-content">
+      <section class="heading"><div><div class="eyebrow" id="breadcrumb">YOUR STUDY SPACE</div><h1 id="page-title">A little every day.<br>A lot more remembered.</h1><p id="page-subtitle">Build your confidence, one flashcard at a time.</p></div><div class="edition"><span>TRILOGY</span><strong>01 / 06</strong><small id="paper-badge">BIOLOGY · PAPER 1</small></div></section>
+      <section class="stats" aria-label="Progress"><div><span class="stat-icon">↻</span><div><strong id="due-stat">0</strong><span>Due for review</span></div></div><div><span class="stat-icon">✧</span><div><strong id="new-stat">0</strong><span>Not started</span></div></div><div><span class="stat-icon">✓</span><div><strong id="today-stat">0</strong><span>Reviews today</span></div></div><div><span class="stat-icon">↗</span><div><strong id="coverage-stat">0%</strong><span>Cards introduced</span></div></div></section>
+      <section id="study-panel" aria-label="Study flashcards"></section>
+      <section id="browse-panel"><div class="section-heading"><div><h2>Your topics</h2><p id="topics-subtitle">Choose a topic, or review this entire paper.</p></div><label class="search-wrap"><span>⌕</span><input id="search" type="search" placeholder="Find a topic or flashcard…" aria-label="Search topics and flashcards"></label></div><div id="topic-grid" class="topic-grid"></div><div id="search-results"></div></section>
+      <footer>Independent revision resource for AQA Combined Science: Trilogy. <button id="scope">Content & coverage</button></footer>
+    </div>
+  </main>
+  <dialog id="dialog"><button id="close-dialog" class="dialog-close" aria-label="Close dialog">×</button><div id="dialog-body"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="deck.js"></script><script src="scheduler.js"></script><script src="app.js"></script>
+</body>
+</html>

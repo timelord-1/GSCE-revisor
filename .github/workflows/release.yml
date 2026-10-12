@@ -1,0 +1,58 @@
+name: Build and publish Windows release
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing release tag (for example v1.0.0)
+        required: true
+        default: v1.0.0
+permissions:
+  contents: write
+jobs:
+  windows-release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag || github.ref }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build:win
+      - name: Exercise the packaged Windows app
+        shell: pwsh
+        run: |
+          $process = Start-Process -FilePath "dist/win-unpacked/Trilogy Revision.exe" -ArgumentList "--smoke-test" -PassThru
+          if (-not $process.WaitForExit(45000)) { $process.Kill(); throw "Desktop smoke test timed out" }
+          if ($process.ExitCode -ne 0) { throw "Desktop smoke test failed with exit code $($process.ExitCode)" }
+      - name: Record checksum
+        shell: pwsh
+        run: |
+          $file = Get-ChildItem dist/Trilogy-Revision-*-Windows-x64.exe | Select-Object -First 1
+          $hash = (Get-FileHash $file.FullName -Algorithm SHA256).Hash.ToLower()
+          "$hash  $($file.Name)" | Set-Content -Encoding ascii dist/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-executable
+          path: |
+            dist/Trilogy-Revision-*-Windows-x64.exe
+            dist/SHA256SUMS.txt
+      - name: Publish executable in Releases
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
+        run: |
+          gh release view "$env:RELEASE_TAG" *> $null
+          if ($LASTEXITCODE -eq 0) {
+            gh release upload "$env:RELEASE_TAG" dist/Trilogy-Revision-*-Windows-x64.exe dist/SHA256SUMS.txt --clobber
+          } else {
+            gh release create "$env:RELEASE_TAG" dist/Trilogy-Revision-*-Windows-x64.exe dist/SHA256SUMS.txt --verify-tag --title "Trilogy Revision $env:RELEASE_TAG" --notes-file docs/RELEASE.md
+          }
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
