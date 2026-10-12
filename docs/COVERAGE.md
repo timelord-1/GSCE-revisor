@@ -41,9 +41,13 @@ Multiple cards can cover one activity. Practical cards summarise methods and con
 
 ## Higher-only labels
 
-51 initial Higher-only cards, plus the corrected motor-effect definition (52 total). Labels include: photosynthesis limiting-factor interactions; oxygen debt/lactic acid processing; glucagon/negative feedback; menstrual-hormone interactions; fertility treatments; adrenaline/thyroxine; genetic-engineering steps; moles/limiting reactants; electron redox/half-equations; strong and weak acids; bond-energy calculations; quantitative rate tangents; equilibrium shifts; alternative copper extraction; improving efficiency; quantitative half-life fractions; force resolution; curved distance–time tangents; inertial mass; momentum; selected electromagnetic mechanisms/refraction; and the motor effect.
+52 Higher-only cards. Labels include: photosynthesis limiting-factor interactions; oxygen debt/lactic acid processing; glucagon/negative feedback; menstrual-hormone interactions; fertility treatments; adrenaline/thyroxine; genetic-engineering steps; moles/limiting reactants; electron redox/half-equations; strong and weak acids; bond-energy calculations; quantitative rate tangents; equilibrium shifts; alternative copper extraction; improving efficiency; quantitative half-life fractions; force resolution; curved distance–time tangents; inertial mass; momentum; selected electromagnetic mechanisms/refraction; and the motor effect.
 
 Foundation still includes reading simple inheritance probabilities; constructing more complex genetic crosses requires tier-specific teaching. Cards deliberately avoid titration/molar-concentration calculations, which are separate Chemistry content. Quantitative pressure–volume gas laws and momentum force–time calculations are not added.
+
+## Circuit-symbol recognition
+
+14 original SVG diagrams cover cells, batteries, switches, lamps, resistors, variable resistors, fuses, diodes, LEDs, thermistors, LDRs, ammeters and voltmeters. Diagram cards also give component functions.
 
 ## Verification status
 

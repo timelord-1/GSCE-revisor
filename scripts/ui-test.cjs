@@ -18,6 +18,14 @@ const path = require('path');
    await page.locator(`[data-subject="${subject}"]`).click();
    for(let paper=1;paper<=2;paper++){await page.locator(`[data-paper="${paper}"]`).click();assert.equal(await page.locator('.topic-card').count(),counts[paper-1]);}
   }
+  await page.locator('[data-paper="1"]').click();
+  await page.locator('#search').fill('symbol represent');
+  assert.equal(await page.locator('.search-card').count(),14);
+  await page.locator('.search-card').first().click();
+  await page.waitForFunction(()=>document.querySelector('.circuit-diagram')?.naturalWidth>0);
+  assert.match(await page.locator('.browse-answer').innerText(),/Cell/);
+  await page.locator('#close-dialog').click();
+  await page.locator('[data-paper="2"]').click();
   await page.locator('#tier').selectOption('foundation');
   await page.locator('#topic-grid [data-topic="6.7"]').click();
   await page.locator('#search').fill('motor effect');

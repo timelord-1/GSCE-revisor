@@ -1787,7 +1787,8 @@ const DECK = {
       "question": "What are the three domains in Woese's system?",
       "answer": [
         "Archaea, bacteria and eukaryota.",
-        "Improved understanding of biochemical differences, including genetic evidence, led to this system."
+        "Improved understanding of biochemical differences, including genetic evidence, led to this system.",
+        "Eukaryota includes protists, fungi, plants and animals."
       ],
       "tier": "all",
       "kind": "knowledge"
@@ -2564,7 +2565,8 @@ const DECK = {
       "topic": "5.3",
       "question": "How do you calculate moles from mass?",
       "answer": [
-        "Amount in mol = mass in g ÷ Mᵣ in g/mol."
+        "Amount in mol = mass in g ÷ molar mass in g/mol.",
+        "Molar mass is numerically equal to the relative atomic or formula mass (Aᵣ or Mᵣ); relative masses themselves have no units."
       ],
       "tier": "higher",
       "kind": "knowledge"
@@ -5364,6 +5366,188 @@ const DECK = {
         "A split-ring commutator reverses current every half-turn so the turning effect stays in the same direction."
       ],
       "tier": "higher",
+      "kind": "knowledge"
+    },
+    {
+      "id": "6.2-23",
+      "topic": "6.2",
+      "question": "Which circuit component does this symbol represent?",
+      "questionImage": "assets/circuits/cell.svg",
+      "imageAlt": "One long and one short parallel vertical line.",
+      "answer": [
+        "Cell.",
+        "The long line is the positive terminal; the short line is the negative terminal."
+      ],
+      "tier": "all",
+      "kind": "knowledge"
+    },
+    {
+      "id": "6.2-24",
+      "topic": "6.2",
+      "question": "Which circuit component does this symbol represent?",
+      "questionImage": "assets/circuits/battery.svg",
+      "imageAlt": "Several pairs of unequal parallel vertical lines.",
+      "answer": [
+        "Battery.",
+        "Two or more cells supply a potential difference."
+      ],
+      "tier": "all",
+      "kind": "knowledge"
+    },
+    {
+      "id": "6.2-25",
+      "topic": "6.2",
+      "question": "Which circuit component does this symbol represent?",
+      "questionImage": "assets/circuits/switch-open.svg",
+      "imageAlt": "Two contact dots with a raised connecting arm.",
+      "answer": [
+        "Open switch.",
+        "The circuit is broken, so no current flows through this path."
+      ],
+      "tier": "all",
+      "kind": "knowledge"
+    },
+    {
+      "id": "6.2-26",
+      "topic": "6.2",
+      "question": "Which circuit component does this symbol represent?",
+      "questionImage": "assets/circuits/switch-closed.svg",
+      "imageAlt": "Two contact dots joined by a horizontal arm.",
+      "answer": [
+        "Closed switch.",
+        "The circuit is complete, allowing current through the path."
+      ],
+      "tier": "all",
+      "kind": "knowledge"
+    },
+    {
+      "id": "6.2-27",
+      "topic": "6.2",
+      "question": "Which circuit component does this symbol represent?",
+      "questionImage": "assets/circuits/lamp.svg",
+      "imageAlt": "A circle with a diagonal cross inside.",
+      "answer": [
+        "Lamp.",
+        "A filament lamp transfers electrical energy to light and thermal stores."
+      ],
+      "tier": "all",
+      "kind": "knowledge"
+    },
+    {
+      "id": "6.2-28",
+      "topic": "6.2",
+      "question": "Which circuit component does this symbol represent?",
+      "questionImage": "assets/circuits/resistor.svg",
+      "imageAlt": "A rectangle in the wire.",
+      "answer": [
+        "Resistor.",
+        "Provides resistance; an ohmic resistor has constant resistance at constant temperature."
+      ],
+      "tier": "all",
+      "kind": "knowledge"
+    },
+    {
+      "id": "6.2-29",
+      "topic": "6.2",
+      "question": "Which circuit component does this symbol represent?",
+      "questionImage": "assets/circuits/variable-resistor.svg",
+      "imageAlt": "A rectangle with a diagonal arrow through it.",
+      "answer": [
+        "Variable resistor.",
+        "Its resistance can be adjusted to change circuit current."
+      ],
+      "tier": "all",
+      "kind": "knowledge"
+    },
+    {
+      "id": "6.2-30",
+      "topic": "6.2",
+      "question": "Which circuit component does this symbol represent?",
+      "questionImage": "assets/circuits/fuse.svg",
+      "imageAlt": "A narrow rectangle with the wire continuing through it.",
+      "answer": [
+        "Fuse.",
+        "Melts when current is too large, breaking the circuit."
+      ],
+      "tier": "all",
+      "kind": "knowledge"
+    },
+    {
+      "id": "6.2-31",
+      "topic": "6.2",
+      "question": "Which circuit component does this symbol represent?",
+      "questionImage": "assets/circuits/diode.svg",
+      "imageAlt": "A triangle pointing at a vertical bar on the wire.",
+      "answer": [
+        "Diode.",
+        "Allows current mainly in one direction."
+      ],
+      "tier": "all",
+      "kind": "knowledge"
+    },
+    {
+      "id": "6.2-32",
+      "topic": "6.2",
+      "question": "Which circuit component does this symbol represent?",
+      "questionImage": "assets/circuits/led.svg",
+      "imageAlt": "A diode with two arrows pointing away from it.",
+      "answer": [
+        "Light-emitting diode (LED).",
+        "Emits light when current flows in the forward direction."
+      ],
+      "tier": "all",
+      "kind": "knowledge"
+    },
+    {
+      "id": "6.2-33",
+      "topic": "6.2",
+      "question": "Which circuit component does this symbol represent?",
+      "questionImage": "assets/circuits/thermistor.svg",
+      "imageAlt": "A resistor crossed by a diagonal line with a short horizontal foot.",
+      "answer": [
+        "Thermistor.",
+        "Resistance decreases as temperature increases."
+      ],
+      "tier": "all",
+      "kind": "knowledge"
+    },
+    {
+      "id": "6.2-34",
+      "topic": "6.2",
+      "question": "Which circuit component does this symbol represent?",
+      "questionImage": "assets/circuits/ldr.svg",
+      "imageAlt": "A resistor inside a circle with arrows pointing towards it.",
+      "answer": [
+        "Light-dependent resistor (LDR).",
+        "Resistance decreases as light intensity increases."
+      ],
+      "tier": "all",
+      "kind": "knowledge"
+    },
+    {
+      "id": "6.2-35",
+      "topic": "6.2",
+      "question": "Which circuit component does this symbol represent?",
+      "questionImage": "assets/circuits/ammeter.svg",
+      "imageAlt": "A circle containing the letter A.",
+      "answer": [
+        "Ammeter.",
+        "Measures current in amperes; connect it in series."
+      ],
+      "tier": "all",
+      "kind": "knowledge"
+    },
+    {
+      "id": "6.2-36",
+      "topic": "6.2",
+      "question": "Which circuit component does this symbol represent?",
+      "questionImage": "assets/circuits/voltmeter.svg",
+      "imageAlt": "A circle containing the letter V.",
+      "answer": [
+        "Voltmeter.",
+        "Measures potential difference in volts; connect it in parallel."
+      ],
+      "tier": "all",
       "kind": "knowledge"
     }
   ]

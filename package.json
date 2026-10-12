@@ -1,6 +1,6 @@
 {
   "name": "trilogy-revision",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Offline AQA GCSE Combined Science Trilogy flashcards with spaced repetition",
   "main": "src/main.cjs",
   "author": "timelord-1",

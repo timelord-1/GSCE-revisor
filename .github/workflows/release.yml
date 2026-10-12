@@ -7,7 +7,7 @@ on:
       tag:
         description: Existing release tag (for example v1.0.0)
         required: true
-        default: v1.0.0
+        default: v1.0.1
 permissions:
   contents: write
 jobs:
@@ -49,10 +49,11 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
         run: |
+          $asset = (Get-ChildItem dist/Trilogy-Revision-*-Windows-x64.exe | Select-Object -First 1).FullName
           gh release view "$env:RELEASE_TAG" *> $null
           if ($LASTEXITCODE -eq 0) {
-            gh release upload "$env:RELEASE_TAG" dist/Trilogy-Revision-*-Windows-x64.exe dist/SHA256SUMS.txt --clobber
+            gh release upload "$env:RELEASE_TAG" "$asset" dist/SHA256SUMS.txt --clobber
           } else {
-            gh release create "$env:RELEASE_TAG" dist/Trilogy-Revision-*-Windows-x64.exe dist/SHA256SUMS.txt --verify-tag --title "Trilogy Revision $env:RELEASE_TAG" --notes-file docs/RELEASE.md
+            gh release create "$env:RELEASE_TAG" "$asset" dist/SHA256SUMS.txt --verify-tag --title "Trilogy Revision $env:RELEASE_TAG" --notes-file docs/RELEASE.md
           }
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
