@@ -15,3 +15,20 @@
 @media(max-width:600px) { .deck-filters { grid-template-columns:1fr; } }
 
 #page-title, .deck-card-choice span { overflow-wrap:anywhere; }
+.sidebar { overflow-y:auto; }
+#card-library { width:100%; margin-top:12px; }
+.mode-setting { display:block; margin:18px 0 8px; }
+#study-mode, .editor-label select, .editor-label textarea { width:100%; padding:10px; border:1px solid var(--line); border-radius:7px; background:white; color:var(--ink); box-sizing:border-box; font:inherit; }
+.editor-label { display:block; margin:18px 0; }
+.editor-label textarea { display:block; margin-top:8px; resize:vertical; }
+.library-card-list { max-height:400px; overflow:auto; border:1px solid var(--line); border-radius:8px; padding:0 12px; }
+.library-card { padding:15px 0; border-bottom:1px solid var(--line); overflow-wrap:anywhere; }
+.library-question { display:block; text-align:left; background:none; color:var(--ink); font-weight:650; padding:0; line-height:1.5; }
+.library-card small { display:block; color:var(--muted); margin:7px 0 10px; }
+.library-card button { margin-right:6px; }
+.library-pagination { display:flex; justify-content:space-between; align-items:center; gap:10px; margin-top:16px; font-size:12px; }
+.day-choice { display:inline-flex; align-items:center; gap:5px; margin:6px; }
+#plan-fields fieldset { border:1px solid var(--line); border-radius:8px; margin-top:14px; }
+.plan-summary, #plan-progress { font-size:11px; line-height:1.6; color:var(--muted); margin:12px 0 0; }
+#custom-nav { margin-bottom:70px; }
+@media(max-width:800px) { #custom-nav { margin-bottom:0; } #card-library { width:auto; margin-right:8px; } }

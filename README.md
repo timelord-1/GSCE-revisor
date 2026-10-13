@@ -6,7 +6,7 @@ An offline desktop revision app for **AQA GCSE Combined Science: Trilogy (8464)*
 
 ## Download and run
 
-Download `Trilogy-Revision-1.1.0-Windows-x64.exe` from this repository's **Releases** page when the release build has completed. It is a portable Windows x64 executable: run it without installing Node.js or other dependencies. The application is unsigned; no signing certificate has been supplied. It requires a supported Windows version compatible with Electron (Windows 10 or later).
+Download `Trilogy-Revision-1.2.0-Windows-x64.exe` from this repository's **Releases** page when the release build has completed. It is a portable Windows x64 executable: run it without installing Node.js or other dependencies. The application is unsigned; no signing certificate has been supplied. It requires a supported Windows version compatible with Electron (Windows 10 or later).
 
 The release workflow builds on Windows and uploads the executable and a SHA-256 checksum. An executable produced locally on Linux is also available in the development environment's `dist/` directory. **Building the Windows artifact does not establish that it has been run on Windows.** See the release status in GitHub Actions; an unfinished or failed workflow does not mean an uploaded release exists.
 
@@ -21,9 +21,13 @@ Space reveals an answer; press Space again to rate **Good** and advance. Keys 1�
 
 The default is 20 new cards per local calendar day across all subjects, configurable from 0–200 in Settings. Due reviews are not capped. New-card limits do not prevent unscheduled practice. Cards due during an open session become available as their learning delay expires.
 
-Enable **Include application questions** in Settings to study scenario, calculation and data questions (off by default).
+In **Settings → Question mode**, choose **Core questions only**, **All questions**, or **Application questions only**. The chosen mode applies to scheduled reviews, practice and study search; the library always allows browsing every card. Existing application-question settings migrate automatically.
 
-Use **Manage custom decks** to create named selections across subjects, papers and topics, or select individual cards. Edit or delete selections later. Card schedules are shared with the subject decks; deleting a custom deck keeps progress. Custom decks are included in backups and retained when resetting progress.
+Use **Browse & edit all cards** to browse the entire library, filter by subject/paper/topic/type/tier, read answers, edit cards or make your own. Personal cards and edits stay on this device, are labelled during study, and are included in backups. Editing retains the schedule; reverting restores the original built-in card. New cards are assigned to one of the Combined Science topics. Personal content has not been audited against the specification.
+
+Use **Decks & study plans** to select individual cards or whole topics across subjects and papers, including your own cards. A study plan adds chosen weekdays, a start date, an optional target date, and daily new-card/review limits. Each rating counts as a review; ratings of the selected cards in any deck count towards that plan. The global new-card cap also applies. The target date is a goal and does not expire the plan. On unscheduled days or after limits, practice is available without changing schedules.
+
+Card schedules are shared with subject decks; deleting a deck or plan keeps progress. Deleting a personal card removes its progress/history and its membership in selections; empty selections are removed after confirmation. Resetting progress retains personal cards, edits, decks, plans and settings.
 
 ## How scheduling works
 
@@ -38,7 +42,7 @@ This is **Anki-inspired SM-2-style scheduling**, not Anki and not an implementat
 
 Everything runs locally. There are no accounts, telemetry, subscriptions, servers or API keys. Progress is stored in Electron's persistent app storage on this computer (normally under `%APPDATA%/Trilogy Revision` on Windows). Moving or deleting the executable normally leaves that profile intact.
 
-Export a JSON backup from Settings before reinstalling, clearing storage or moving computers. Import validates the entire backup before offering to replace current progress. A reset requires typing `RESET`. Unreadable existing progress is preserved rather than silently overwritten.
+Export a JSON backup from Settings before reinstalling, clearing storage or moving computers. Backups include personal cards, edits, decks, plans and question mode as well as progress. Import validates all of these before offering to replace current data. Legacy backups remain supported; importing one replaces personal content with the data it contains. A reset requires typing `RESET`. Unreadable existing progress is preserved rather than silently overwritten.
 
 ## Content scope and verification
 
@@ -48,7 +52,7 @@ The initial course outline was followed by the full saved AQA specification webp
 
 The audit corrected mixed-section tier boundaries, separated Foundation definitions from Higher explanations, added missing revision coverage and removed unneeded separate-science details. The Higher-tier transformer **power-balance** equation VₚIₚ = VₛIₛ is included because section 6.2.4.3 of the supplied AQA page explicitly requires it. Transformer turns-ratio equations and induction/generator theory are excluded.
 
-This verifies alignment with the **supplied AQA snapshot**, not unseen later website changes. Section coverage is not a claim that flashcards cover every possible exam question. Mathematical application, drawing diagrams, interpreting unfamiliar graphs and supervised practical work still need exam and classroom practice.
+This verifies alignment with the **supplied AQA snapshot**, not unseen later website changes. Section coverage is not a claim that flashcards cover every possible exam question. Mathematical application, drawing diagrams, interpreting unfamiliar graphs and supervised practical work still need exam and classroom practice. Personal cards and edited answers are separate from the immutable built-in source and are labelled as unverified personal content.
 
 The `Application questions` directory contains 25 user-supplied PDFs (24 separate-science papers/mark schemes and the 8464 specification). All 952 pages were extracted and reviewed in tracked batches before card changes. Separate-only questions were excluded; one original Biology photograph is absent for copyright reasons and was reported. See [PDF inventory and analysis](docs/PDF-ANALYSIS.md) and [machine-readable checks](docs/pdf-analysis.json). The PDFs are not bundled with the executable.
 
@@ -96,9 +100,9 @@ The packaged renderer uses a restrictive content-security policy, sandboxing, no
 Pushing a `v*` tag triggers `.github/workflows/release.yml` on GitHub. It runs the unit checks, builds a Windows x64 portable executable and publishes it with a checksum using the repository-scoped Actions `GITHUB_TOKEN` and `contents: write`. It exercises the packaged app on Windows before publication and can also be run manually for an existing tag.
 
 ```sh
-git tag -a v1.1.0 -m "Trilogy Revision 1.1.0"
+git tag -a v1.2.0 -m "Trilogy Revision 1.2.0"
 git push origin main
-git push origin v1.1.0
+git push origin v1.2.0
 ```
 
 Do not claim publication until the release and its assets are visible on GitHub. If Actions is disabled or organisation policy restricts release writes, enable the workflow's permissions or upload the already-built executable through Releases.

@@ -60,3 +60,7 @@ Automated checks verify that all cards have valid references, all 225 subject se
 All 25 PDFs in `Application questions` were accessible before flashcard edits: 952 pages, two agreeing text extractors and rendered page images. The full recursive inventory, seven batch results, SHA-256 hashes and Combined-only exclusions are recorded in [PDF-ANALYSIS.md](PDF-ANALYSIS.md). Biology 2024 Paper 1 omits a copyright photograph in its original page 16; no photograph-dependent cards were added.
 
 24 original application scenarios bring the deck to 641 cards. Together with 19 existing scenario/calculation/diagram cards they form 43 application cards, hidden until enabled in Settings. Custom decks collect built-in AQA cards; they do not introduce unverified course content. All previous card IDs, topic/paper boundaries and 225-section mapping remain intact.
+
+## Version 1.2.0 personal study
+
+The built-in deck and reference audit are unchanged. Users can now browse every card, save personal edits or create personal cards, and build scheduled study selections. Personal content is clearly labelled; it is not claimed to have passed the specification audit. Original card IDs and source references are preserved. Application-only mode uses explicit card types, never question-text heuristics.

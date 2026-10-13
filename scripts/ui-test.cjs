@@ -35,8 +35,8 @@ const path = require('path');
   await page.locator('#search').fill('missing box');
   assert.equal(await page.locator('.search-card').count(),0);
   await page.locator('#settings').click();
-  assert.equal(await page.locator('#application-questions').isChecked(),false);
-  await page.locator('#application-questions').check();await page.locator('#save-settings').click();await page.locator('#close-dialog').click();
+  assert.equal(await page.locator('#study-mode').inputValue(),'core');
+  await page.locator('#study-mode').selectOption('all');await page.locator('#save-settings').click();await page.locator('#close-dialog').click();
   assert.equal(await page.locator('.search-card').count(),1);
   await page.locator('.search-card').click();
   await page.waitForFunction(()=>document.querySelector('.circuit-diagram')?.naturalWidth>0);
@@ -115,9 +115,65 @@ const path = require('path');
   await page.locator('[data-delete-deck]').click();await page.locator('#confirm-delete-deck').click();assert.equal(await page.locator('[data-study-deck]').count(),0);
   assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('trilogy-revision-v1')).progress),saved.progress);
   await page.locator('#close-dialog').click();
-  await page.locator('#settings').click();await page.locator('#application-questions').uncheck();await page.locator('#save-settings').click();await page.locator('#close-dialog').click();await page.reload();
-  await page.locator('#settings').click();assert.equal(await page.locator('#application-questions').isChecked(),false);await page.locator('#close-dialog').click();
+  await page.locator('#settings').click();await page.locator('#study-mode').selectOption('core');await page.locator('#save-settings').click();await page.locator('#close-dialog').click();await page.reload();
+  await page.locator('#settings').click();assert.equal(await page.locator('#study-mode').inputValue(),'core');await page.locator('#close-dialog').click();
+  await page.setViewportSize({width:1280,height:900});
+  await page.locator('#card-library').click();
+  assert.match(await page.locator('#library-count').innerText(),/641 matching cards/);
+  let browsed=0;
+  while(true){browsed+=await page.locator('.library-card').count();if(await page.locator('#library-next').isDisabled())break;await page.locator('#library-next').click();}
+  assert.equal(browsed,641);
+  await page.locator('#library-search').fill('eukaryotic');await page.locator('[data-edit-card="4.1-01"]').click();
+  await page.locator('#card-front').fill('My edited eukaryotic question?');await page.locator('#card-back').fill('My own answer point.');await page.locator('#save-card').click();
+  assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('trilogy-revision-v1')).progress),saved.progress);
+  await page.locator('[data-view-library="4.1-01"]').click();assert.match(await page.locator('#dialog-body').innerText(),/Your edit/);assert.match(await page.locator('.library-answer').innerText(),/My own answer/);await page.locator('#back-library').click();
+  await page.reload();await page.locator('#card-library').click();await page.locator('#library-search').fill('My edited eukaryotic question');assert.equal(await page.locator('.library-card').count(),1);
+  await page.locator('[data-revert-card="4.1-01"]').click();await page.locator('#confirm-revert-card').click();
+  assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('trilogy-revision-v1')).progress),saved.progress);
+  for(const suffix of ['A','B']) {
+    await page.locator('#create-card').click();await page.locator('#card-topic').selectOption('4.1');await page.locator('#card-kind').selectOption('application');
+    await page.locator('#card-front').fill(`Personal application ${suffix}: explain this result?`);await page.locator('#card-back').fill('Point one: compare the concentrations.\nPoint two: explain the direction of movement.');await page.locator('#save-card').click();
+    await page.locator('[data-view-library]').click();assert.match(await page.locator('#dialog-body').innerText(),/Your card/);assert.equal(await page.locator('.library-answer li').count(),2);await page.locator('#back-library').click();
+  }
+  let personal=await page.evaluate(()=>JSON.parse(localStorage.getItem('trilogy-revision-v1')));assert.equal(personal.customCards.length,2);
+  const personalId=personal.customCards[0].id;
+  await page.locator('#close-dialog').click();await page.locator('#settings').click();await page.locator('#new-limit').fill('20');await page.locator('#study-mode').selectOption('application');await page.locator('#save-settings').click();await page.locator('#close-dialog').click();
+  for(const subject of ['Biology','Chemistry','Physics']) {
+    await page.locator(`[data-subject="${subject}"]`).click();
+    for(const paper of [1,2]) {
+      await page.locator(`[data-paper="${paper}"]`).click();await page.locator('#start-practice').click();
+      assert.match(await page.locator('.question-meta').innerText(),/Application/);await page.keyboard.press('Space');await page.keyboard.press('Space');assert.match(await page.locator('.question-meta').innerText(),/Application/);await page.locator('#end-session').click();
+    }
+  }
+  await page.locator('#custom-study').click();await page.locator('#create-plan').click();await page.locator('#deck-name').fill('My chosen application plan');
+  await page.locator('#deck-search').fill('Personal application');await page.locator('#select-shown').click();assert.match(await page.locator('#selected-count').innerText(),/2 selected/);
+  await page.locator('#plan-new').fill('2');await page.locator('#plan-reviews').fill('1');await page.locator('#save-custom').click();
+  assert.match(await page.locator('#breadcrumb').innerText(),/STUDY PLAN/);await page.locator('#start-review').click();assert.match(await page.locator('.question-meta').innerText(),/Your card/);
+  await page.keyboard.press('Space');await page.keyboard.press('Space');assert.match(await page.locator('#study-panel').innerText(),/Daily review limit reached/);
+  personal=await page.evaluate(()=>JSON.parse(localStorage.getItem('trilogy-revision-v1')));assert.equal(personal.progress[personalId].phase,'learning');assert.equal(personal.customDecks[0].plan.reviewLimit,1);
+  await page.locator('#undo-review').click();assert.equal(await page.evaluate(id=>JSON.parse(localStorage.getItem('trilogy-revision-v1')).progress[id],personalId),undefined);await page.keyboard.press('Space');
+  await page.locator('#continue-practice').click();await page.keyboard.press('Space');await page.keyboard.press('Space');assert.match(await page.locator('#card-question').innerText(),/Personal application B/);await page.locator('#end-session').click();
+  await page.locator('#custom-study').click();await page.locator('[data-edit-deck]').click();
+  const todayDay=await page.evaluate(()=>new Date().getDay());for(const checkbox of await page.locator('[data-plan-day]').all())await checkbox.uncheck();
+  await page.locator(`[data-plan-day="${(todayDay+1)%7}"]`).check();await page.locator('#save-custom').click();
+  assert.match(await page.locator('#plan-progress').innerText(),/not a selected study day/);await page.locator('#start-review').click();assert.match(await page.locator('#study-panel').innerText(),/not a selected study day/);await page.locator('#finish-session').click();
+  await page.locator('#card-library').click();await page.locator('#library-search').fill('Personal application A');await page.locator('[data-edit-card]').click();await page.locator('#card-back').fill('Updated personal answer.');await page.locator('#save-card').click();await page.locator('#close-dialog').click();
+  await page.locator('#settings').click();const personalDownloadEvent=page.waitForEvent('download');await page.locator('#export-backup').click();const personalDownload=await personalDownloadEvent;
+  const personalBackup=JSON.parse(fs.readFileSync(await personalDownload.path(),'utf8'));assert.equal(personalBackup.customCards.length,2);assert.equal(personalBackup.customCards[0].answer[0],'Updated personal answer.');assert.ok(personalBackup.customDecks[0].plan);
+  await page.evaluate(()=>localStorage.clear());await page.reload();await page.locator('#settings').click();
+  await page.locator('#backup-file').setInputFiles({name:'personal.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(personalBackup))});await page.locator('#confirm-import').click();
+  assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('trilogy-revision-v1')).customCards),personalBackup.customCards);
+  assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('trilogy-revision-v1')).progress),personalBackup.progress);
+  await page.locator('#settings').click();assert.equal(await page.locator('#study-mode').inputValue(),'application');await page.locator('#close-dialog').click();
+  await page.locator('#custom-nav [data-custom]').click();assert.match(await page.locator('#plan-progress').innerText(),/not a selected study day/);
+  await page.locator('#card-library').click();await page.locator('#library-search').fill('Personal application A');await page.locator('[data-delete-card]').click();await page.locator('#confirm-delete-card').click();
+  const afterDelete=await page.evaluate(()=>JSON.parse(localStorage.getItem('trilogy-revision-v1')));assert.equal(afterDelete.customCards.length,1);assert.equal(afterDelete.customDecks[0].cardIds.length,1);assert.equal(afterDelete.progress[personalId],undefined);assert.ok(afterDelete.history.every(h=>h.id!==personalId));
+  await page.locator('#library-search').fill('Personal application B');await page.locator('[data-delete-card]').click();await page.locator('#confirm-delete-card').click();
+  assert.equal(await page.evaluate(()=>JSON.parse(localStorage.getItem('trilogy-revision-v1')).customDecks.length),0);
+  await page.setViewportSize({width:390,height:844});await page.locator('#create-card').click();assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+  await page.screenshot({path:'/tmp/trilogy-card-editor.png',fullPage:true});await page.locator('#cancel-card').click();await page.locator('#close-dialog').click();
   assert.deepEqual(errors,[]);
-  console.log('PASS: six papers, tier filtering, question/answer, ratings, undo, persistence, practice, export/import, daily limit, search, responsive layout, precise source references, audit notice, diagram cards, Space-to-Good, application Settings and custom deck creation/edit/deletion/backup. No browser exceptions.');
+
+  console.log('PASS: six papers, tier filtering, question/answer, ratings, undo, persistence, practice, export/import, daily limit, search, responsive layout, precise source references, audit notice, diagram cards, Space-to-Good, application-only review/practice, full library pagination, card creation/edit/revert/deletion, study plan weekdays/limits, and personal backup restoration. No browser exceptions.');
  } finally {if(browser)await browser.close();server.kill();}
 })().catch(error=>{console.error(error);process.exitCode=1;});
