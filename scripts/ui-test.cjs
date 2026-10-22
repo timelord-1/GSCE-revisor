@@ -188,4 +188,4 @@ const path = require('path');
 
   console.log('PASS: six papers, tier filtering, question/answer, ratings, undo, persistence, practice, export/import, daily limit, search, responsive layout, precise source references, audit notice, diagram cards, Space-to-Good, application-only review/practice, full library pagination, card creation/edit/revert/deletion, study plan weekdays/limits, and personal backup restoration. No browser exceptions.');
  } finally {if(browser)await browser.close();server.kill();}
-})().catch(error=>{console.error(error);process.exitCode=1;});
+})().catch(error=>{console.error(error); if(process.env.GITHUB_ACTIONS) console.error("::error::"+String(error.stack||error).replace(/\n/g,"%0A"));process.exitCode=1;});
