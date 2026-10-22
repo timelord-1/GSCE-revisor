@@ -3,3 +3,7 @@ dist/
 .playwright/
 *.log
 test-results/
+
+# Generated, pinned AQA PDFs are downloaded during setup and release builds.
+src/assets/past-papers/*.PDF
+src/assets/past-papers/*.download

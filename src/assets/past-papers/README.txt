@@ -1,0 +1,1 @@
+Official AQA Combined Science Trilogy 8464 PDFs. Run npm run papers:download to populate this directory. The release build downloads and verifies all 72 PDFs before packaging. Copyright remains with AQA and its licensors. Source URLs, titles and published hashes are pinned in src/papers-data.js.

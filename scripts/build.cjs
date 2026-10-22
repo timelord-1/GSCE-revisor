@@ -1,6 +1,8 @@
 const { spawnSync } = require('child_process');
 const path = require('path');
 const os = require('os');
+const check=spawnSync(process.execPath,[path.join(__dirname,'check-papers.cjs')],{stdio:'inherit'});
+if(check.status!==0)process.exit(check.status??1);
 const cache = path.join(os.tmpdir(), 'trilogy-build-cache');
 const result = spawnSync(process.execPath, [require.resolve('electron-builder/out/cli/cli.js'), '--win', 'portable', '--x64', '--publish', 'never', `--config.electronDownload.cache=${path.join(cache, 'electron')}`], {
   stdio: 'inherit',

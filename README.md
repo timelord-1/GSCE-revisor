@@ -6,9 +6,13 @@ An offline desktop revision app for **AQA GCSE Combined Science: Trilogy (8464)*
 
 ## Download and run
 
-Download `Trilogy-Revision-1.2.0-Windows-x64.exe` from this repository's **Releases** page when the release build has completed. It is a portable Windows x64 executable: run it without installing Node.js or other dependencies. The application is unsigned; no signing certificate has been supplied. It requires a supported Windows version compatible with Electron (Windows 10 or later).
+Download `Trilogy-Revision-1.3.0-Windows-x64.exe` from this repository's **Releases** page when the release build has completed. It is a portable Windows x64 executable: run it without installing Node.js or other dependencies. The application is unsigned; no signing certificate has been supplied. It requires a supported Windows version compatible with Electron (Windows 10 or later).
 
 The release workflow builds on Windows and uploads the executable and a SHA-256 checksum. An executable produced locally on Linux is also available in the development environment's `dist/` directory. **Building the Windows artifact does not establish that it has been run on Windows.** See the release status in GitHub Actions; an unfinished or failed workflow does not mean an uploaded release exists.
+
+## Past papers
+
+**Past papers & mark schemes** opens 72 official AQA Combined Science Trilogy PDFs: June 2023, 2024 and 2025, both tiers, all three subjects and both papers, with matching mark schemes. Filter the library, open PDFs in the app, or save a copy. Release builds download and verify the original files before bundling them for offline use. These are separate from the user-supplied separate-science reference documents. See [sources and verification](docs/PAST-PAPERS.md).
 
 ## Study
 
@@ -86,6 +90,8 @@ npm run serve
 Open port 4173 locally. The HTTP server binds only to loopback; it is a development helper, not a production service.
 
 ```sh
+npm run papers:download # requires access to AQA’s cdn.sanity.io
+npm run papers:check
 npm test          # scheduler, backup validation, source coverage, tier and scope checks
 npm run test:ui   # browser interaction, persistence, backup round-trip, responsive layout
 npm run build:win
@@ -100,9 +106,9 @@ The packaged renderer uses a restrictive content-security policy, sandboxing, no
 Pushing a `v*` tag triggers `.github/workflows/release.yml` on GitHub. It runs the unit checks, builds a Windows x64 portable executable and publishes it with a checksum using the repository-scoped Actions `GITHUB_TOKEN` and `contents: write`. It exercises the packaged app on Windows before publication and can also be run manually for an existing tag.
 
 ```sh
-git tag -a v1.2.0 -m "Trilogy Revision 1.2.0"
+git tag -a v1.3.0 -m "Trilogy Revision 1.3.0"
 git push origin main
-git push origin v1.2.0
+git push origin v1.3.0
 ```
 
 Do not claim publication until the release and its assets are visible on GitHub. If Actions is disabled or organisation policy restricts release writes, enable the workflow's permissions or upload the already-built executable through Releases.

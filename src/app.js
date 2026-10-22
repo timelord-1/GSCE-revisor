@@ -343,3 +343,30 @@ function deletePersonalCard(id) {
     refreshIds(); clearSession(); save(); render(); showLibrary(); notify('Personal card deleted.');
   };
 }
+
+let paperFilters = null;
+function showPastPapers() {
+  if (!paperFilters) paperFilters = {subject,paper:String(paper),tier:state.settings.tier,year:''};
+  openDialog(`<span class="pill">AQA COMBINED SCIENCE · 8464</span><h2>Past papers & mark schemes</h2><p>72 official PDFs from June 2023, 2024 and 2025. Both tiers, all three subjects and both papers are included in the desktop app for offline use.</p><div class="deck-filters"><label>Subject<select id="papers-subject"><option value="">All subjects</option>${Object.keys(subjects).map(s=>`<option>${s}</option>`).join('')}</select></label><label>Paper<select id="papers-paper"><option value="">Both papers</option><option value="1">Paper 1</option><option value="2">Paper 2</option></select></label><label>Tier<select id="papers-tier"><option value="">Both tiers</option><option value="foundation">Foundation</option><option value="higher">Higher</option></select></label><label>Year<select id="papers-year"><option value="">All years</option>${[2025,2024,2023].map(y=>`<option>${y}</option>`).join('')}</select></label></div><p id="papers-count" role="status"></p><p id="papers-status" role="status" aria-live="polite"></p><div id="papers-list" class="past-paper-list"></div><p>Original AQA documents, supplied as published. Copyright remains with AQA and its licensors. Browsing papers does not change flashcard progress.</p>`);
+  function draw() {
+    const questions=PAPERS.documents.filter(d=>d.kind==='question'&&(!paperFilters.subject||d.subject===paperFilters.subject)&&(!paperFilters.paper||d.paper===Number(paperFilters.paper))&&(!paperFilters.tier||d.tier===paperFilters.tier)&&(!paperFilters.year||d.year===Number(paperFilters.year))).sort((a,b)=>b.year-a.year||a.subject.localeCompare(b.subject)||a.paper-b.paper||a.tier.localeCompare(b.tier));
+    $('#papers-count').textContent=`${questions.length} paper sets · ${questions.length*2} PDFs`;
+    $('#papers-list').innerHTML=questions.map(q=>{
+      const mark=PAPERS.documents.find(d=>d.kind==='mark-scheme'&&d.subject===q.subject&&d.paper===q.paper&&d.tier===q.tier&&d.year===q.year);
+      return `<article class="past-paper-row"><h3>${esc(q.subject)} · Paper ${q.paper} · ${q.tier==='higher'?'Higher':'Foundation'}</h3><p>June ${q.year} · AQA 8464</p><div class="paper-document-grid">${[q,mark].map(d=>`<div><strong>${d.kind==='question'?'Question paper':'Mark scheme'}</strong><small>${(d.bytes/1024/1024).toFixed(1)} MB</small><a class="secondary" href="assets/past-papers/${d.filename}" target="_blank" rel="noopener" data-open-paper="${d.id}">Open PDF</a><a class="secondary" href="assets/past-papers/${d.filename}" download="${d.filename}" data-save-paper="${d.id}">Save a copy</a></div>`).join('')}</div></article>`;
+    }).join('')||'<p>No papers match these filters.</p>';
+  }
+  for(const key of ['subject','paper','tier','year']) {const input=$(`#papers-${key}`);input.value=paperFilters[key];input.onchange=()=>{paperFilters[key]=input.value;draw();};}
+  $('#papers-list').onclick=async event=>{
+    const link=event.target.closest('[data-open-paper],[data-save-paper]');
+    if(!link||!window.trilogyPapers)return;
+    event.preventDefault();if(link.getAttribute('aria-disabled')==='true')return;
+    const saving=Boolean(link.dataset.savePaper),id=link.dataset.savePaper||link.dataset.openPaper,status=$('#papers-status');
+    link.setAttribute('aria-disabled','true');status.textContent=saving?'Choose where to save the PDF…':'Opening PDF…';
+    try {const result=await window.trilogyPapers[saving?'save':'open'](id);status.textContent=result.ok?(result.cancelled?'Save cancelled.':saving?'PDF saved.':'PDF opened in its own window.'):result.error;}
+    catch {status.textContent='Could not access this PDF. Please try again.';}
+    finally {link.removeAttribute('aria-disabled');}
+  };
+  draw();
+}
+$('#past-papers').addEventListener('click',showPastPapers);

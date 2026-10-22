@@ -32,3 +32,14 @@
 .plan-summary, #plan-progress { font-size:11px; line-height:1.6; color:var(--muted); margin:12px 0 0; }
 #custom-nav { margin-bottom:70px; }
 @media(max-width:800px) { #custom-nav { margin-bottom:0; } #card-library { width:auto; margin-right:8px; } }
+#past-papers { width:100%; margin-top:12px; }
+.past-paper-list { max-height:460px; overflow:auto; }
+.past-paper-row { padding:15px 0; border-bottom:1px solid var(--line); }
+.past-paper-row h3 { margin:0 0 4px; }
+.paper-document-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.paper-document-grid strong, .paper-document-grid small { display:block; margin:5px 0 10px; }
+.paper-document-grid small { color:var(--muted); }
+.paper-document-grid a { display:inline-block; margin:0 5px 7px 0; text-decoration:none; font-size:12px; }
+.paper-document-grid a[aria-disabled=true] { opacity:.5; pointer-events:none; }
+#papers-status { min-height:20px; }
+@media(max-width:600px) { .paper-document-grid { grid-template-columns:1fr; } #past-papers { width:auto; margin-right:8px; } }
