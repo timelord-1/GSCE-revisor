@@ -43,3 +43,5 @@
 .paper-document-grid a[aria-disabled=true] { opacity:.5; pointer-events:none; }
 #papers-status { min-height:20px; }
 @media(max-width:600px) { .paper-document-grid { grid-template-columns:1fr; } #past-papers { width:auto; margin-right:8px; } }
+/* Keep navigation sections at their natural height so overflow scrolls instead of overlapping controls. */
+.sidebar > * { flex-shrink: 0; }
