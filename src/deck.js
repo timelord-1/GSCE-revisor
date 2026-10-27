@@ -9266,6 +9266,1442 @@ const DECK = {
         "question": "07.2",
         "note": "Original scenario inspired by shared content; Combined Science 8464 reference governs scope."
       }
+    },
+    {
+      "id": "application-8464-2025-b1-01-3",
+      "topic": "4.2",
+      "specRefs": [
+        "4.2.2.2",
+        "4.1.1.2",
+        "4.4.2.1"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A heart muscle cell contracts repeatedly throughout the day. Explain why it needs more mitochondria than a cell with a low energy demand.",
+      "answer": [
+        "More mitochondria allow a greater rate of aerobic respiration.",
+        "Respiration releases the energy needed for repeated muscle contraction."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/B/1H",
+        "year": 2025,
+        "question": "01.3",
+        "questionPaperId": "8464b1h-qp-jun25",
+        "markSchemeId": "8464b1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          3
+        ],
+        "markSchemePages": [
+          7
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-b1-02-4",
+      "topic": "4.3",
+      "specRefs": [
+        "4.3.1.9"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A new vaccine stimulates antibody production in the laboratory. Why does that result alone not show that it is ready for use in people?",
+      "answer": [
+        "Testing must establish toxicity and possible side effects, not just an immune response.",
+        "Trials must check effectiveness in people and find a suitable dose."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/B/1H",
+        "year": 2025,
+        "question": "02.4",
+        "questionPaperId": "8464b1h-qp-jun25",
+        "markSchemeId": "8464b1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          6
+        ],
+        "markSchemePages": [
+          11
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-b1-03-2",
+      "topic": "4.4",
+      "specRefs": [
+        "4.4.1.2"
+      ],
+      "tier": "higher",
+      "kind": "application",
+      "question": "A lamp is moved from 15 cm to 45 cm from pondweed. Using intensity ∝ 1/d², calculate the new light intensity as a fraction of the original.",
+      "answer": [
+        "The distance is multiplied by 3, so intensity is multiplied by 1/3² = 1/9.",
+        "This predicts light intensity; photosynthesis rate need not fall by the same fraction if another factor limits it."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/B/1H",
+        "year": 2025,
+        "question": "03.2",
+        "questionPaperId": "8464b1h-qp-jun25",
+        "markSchemeId": "8464b1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          11
+        ],
+        "markSchemePages": [
+          13
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-b1-04-1",
+      "topic": "4.1",
+      "specRefs": [
+        "4.1.3.2"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "Two potato samples each gain 0.20 g in water, but their starting masses are 2.0 g and 4.0 g. Why would comparing only mass gain be misleading?",
+      "answer": [
+        "Their percentage gains are (0.20/2.0) × 100 = 10% and (0.20/4.0) × 100 = 5%.",
+        "Percentage change accounts for different starting masses, allowing a fairer comparison."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/B/1H",
+        "year": 2025,
+        "question": "04.1",
+        "questionPaperId": "8464b1h-qp-jun25",
+        "markSchemeId": "8464b1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          14
+        ],
+        "markSchemePages": [
+          15
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-b1-05-3",
+      "topic": "4.2",
+      "specRefs": [
+        "4.2.3.1",
+        "4.4.1.1"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "Two leaf cells receive the same light. One contains many more chloroplasts. Explain how this adaptation can increase its photosynthesis rate when light is limiting.",
+      "answer": [
+        "Chloroplasts contain chlorophyll, which absorbs light.",
+        "More chloroplasts can absorb more light energy for photosynthesis."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/B/1H",
+        "year": 2025,
+        "question": "05.3",
+        "questionPaperId": "8464b1h-qp-jun25",
+        "markSchemeId": "8464b1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          18
+        ],
+        "markSchemePages": [
+          17
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-b1-06-3",
+      "topic": "4.1",
+      "specRefs": [
+        "4.1.1.5"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A cell structure measures 8.0 mm in an image magnified ×2000. Calculate its real size in micrometres.",
+      "answer": [
+        "Real size = image size / magnification = 8.0/2000 = 0.0040 mm.",
+        "0.0040 × 1000 = 4.0 µm."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/B/1H",
+        "year": 2025,
+        "question": "06.3",
+        "questionPaperId": "8464b1h-qp-jun25",
+        "markSchemeId": "8464b1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          21
+        ],
+        "markSchemePages": [
+          19
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-b1-06-4",
+      "topic": "4.4",
+      "specRefs": [
+        "4.4.2.1",
+        "4.4.2.2",
+        "4.2.2.3"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "An athlete has fewer red blood cells than normal. Explain why their muscles may fatigue sooner during exercise.",
+      "answer": [
+        "Less oxygen is transported to the muscles.",
+        "More reliance on anaerobic respiration causes lactic acid to build up, contributing to fatigue."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/B/1H",
+        "year": 2025,
+        "question": "06.4",
+        "questionPaperId": "8464b1h-qp-jun25",
+        "markSchemeId": "8464b1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          22
+        ],
+        "markSchemePages": [
+          20
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-b1-06-6",
+      "topic": "4.1",
+      "specRefs": [
+        "4.1.2.3",
+        "4.2.2.3"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "Lab-grown red blood cells made from a patient’s own stem cells cost £160 per dose; matched donor cells cost £80. The lab-grown cells last longer. Give a balanced judgement about using them.",
+      "answer": [
+        "Using the patient’s own cells reduces rejection risk; longer-lasting cells may mean fewer transfusions.",
+        "Each dose costs twice as much, so donor cells may be preferable when suitable matches are available.",
+        "Lab-grown cells may be justified for hard-to-match patients; total treatment cost also depends on transfusion frequency."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/B/1H",
+        "year": 2025,
+        "question": "06.6",
+        "questionPaperId": "8464b1h-qp-jun25",
+        "markSchemeId": "8464b1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          24,
+          25
+        ],
+        "markSchemePages": [
+          21,
+          22
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-b2-01-3",
+      "topic": "4.6",
+      "specRefs": [
+        "4.6.1.2",
+        "4.6.1.4"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A diploid body cell has alleles Dd for a gene, but a gamete contains only d. Explain why the gamete does not also contain D.",
+      "answer": [
+        "Meiosis produces haploid gametes with one chromosome from each pair.",
+        "A gamete therefore receives only one allele of this gene, either D or d."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/B/2H",
+        "year": 2025,
+        "question": "01.3",
+        "questionPaperId": "8464b2h-qp-jun25",
+        "markSchemeId": "8464b2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          5
+        ],
+        "markSchemePages": [
+          9
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-b2-02-3",
+      "topic": "4.5",
+      "specRefs": [
+        "4.5.3.4"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A contraceptive pill prevents pregnancy. Explain why using a condom as well can provide a different health benefit.",
+      "answer": [
+        "A condom forms a barrier that reduces transmission of sexually transmitted infections.",
+        "The hormonal pill does not provide this barrier protection."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/B/2H",
+        "year": 2025,
+        "question": "02.3",
+        "questionPaperId": "8464b2h-qp-jun25",
+        "markSchemeId": "8464b2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          7
+        ],
+        "markSchemePages": [
+          12
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-b2-03-2",
+      "topic": "4.7",
+      "specRefs": [
+        "4.7.2.1"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A quadrat contains 25 equal squares. Nine are at least half covered by daisies; the method counts these as covered. Estimate percentage cover.",
+      "answer": [
+        "Percentage cover = counted squares / total squares × 100.",
+        "(9/25) × 100 = 36%; this is an estimate using the stated counting rule."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/B/2H",
+        "year": 2025,
+        "question": "03.2",
+        "questionPaperId": "8464b2h-qp-jun25",
+        "markSchemeId": "8464b2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          11
+        ],
+        "markSchemePages": [
+          14
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-b2-04-1",
+      "topic": "4.6",
+      "specRefs": [
+        "4.6.2.4",
+        "4.7.1.1",
+        "4.4.1.1"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A crop is engineered to survive a particular herbicide. Explain how spraying that herbicide can increase crop yield.",
+      "answer": [
+        "The herbicide kills weeds while the resistant crop survives.",
+        "The crop has less competition for light, water and mineral ions.",
+        "More photosynthesis can produce more glucose for growth, increasing yield."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/B/2H",
+        "year": 2025,
+        "question": "04.1",
+        "questionPaperId": "8464b2h-qp-jun25",
+        "markSchemeId": "8464b2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          15
+        ],
+        "markSchemePages": [
+          18
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-b2-04-2",
+      "topic": "4.7",
+      "specRefs": [
+        "4.7.3.1",
+        "4.6.2.4"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "After herbicide-resistant crops are sprayed, crop yield rises but fewer insect species are found. Suggest a linked explanation.",
+      "answer": [
+        "The herbicide kills wildflowers and other non-resistant plants.",
+        "This reduces the variety of food and habitats for insects, so fewer insect species can survive."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/B/2H",
+        "year": 2025,
+        "question": "04.2",
+        "questionPaperId": "8464b2h-qp-jun25",
+        "markSchemeId": "8464b2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          15
+        ],
+        "markSchemePages": [
+          18
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-b2-05-4",
+      "topic": "4.6",
+      "specRefs": [
+        "4.6.3.2",
+        "4.6.2.1"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "Two fossils have different limb shapes. Why can scientists not identify the exact DNA mutations responsible just by comparing these fossils?",
+      "answer": [
+        "Fossils mainly preserve observable structures; the original DNA is usually lost.",
+        "The fossil record is incomplete, so it does not show every intermediate individual or change."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/B/2H",
+        "year": 2025,
+        "question": "05.4",
+        "questionPaperId": "8464b2h-qp-jun25",
+        "markSchemeId": "8464b2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          18
+        ],
+        "markSchemePages": [
+          22
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-b2-06-2",
+      "topic": "4.5",
+      "specRefs": [
+        "4.5.3.2"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "C-peptide is released when the pancreas makes insulin; insulin injections contain none. Why can C-peptide measurements help distinguish Type 1 from Type 2 diabetes in someone using injections?",
+      "answer": [
+        "Type 1 diabetes involves little or no insulin production, so C-peptide is usually low.",
+        "In Type 2 diabetes, cells respond less well to insulin but the pancreas may still produce it, so C-peptide may be normal or high.",
+        "Injected insulin does not raise C-peptide, so the test indicates the body’s own insulin production."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/B/2H",
+        "year": 2025,
+        "question": "06.2",
+        "questionPaperId": "8464b2h-qp-jun25",
+        "markSchemeId": "8464b2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          21
+        ],
+        "markSchemePages": [
+          25
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-b2-06-4",
+      "topic": "4.5",
+      "specRefs": [
+        "4.5.3.2",
+        "4.4.2.1"
+      ],
+      "tier": "higher",
+      "kind": "application",
+      "question": "A person produces too little glucagon when blood glucose falls. Explain why they may feel weak between meals.",
+      "answer": [
+        "Less glycogen is converted to glucose in the liver, so blood glucose is not restored effectively.",
+        "Less glucose is available for respiration, so less energy is released for cell activities."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/B/2H",
+        "year": 2025,
+        "question": "06.4",
+        "questionPaperId": "8464b2h-qp-jun25",
+        "markSchemeId": "8464b2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          22
+        ],
+        "markSchemePages": [
+          26
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-c1-01-5",
+      "topic": "5.4",
+      "specRefs": [
+        "5.4.3.4"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A student predicts potassium metal will form when aqueous potassium chloride is electrolysed. Explain why hydrogen forms at the negative electrode instead.",
+      "answer": [
+        "Potassium is more reactive than hydrogen.",
+        "In an aqueous solution, hydrogen is produced at the negative electrode rather than this more reactive metal."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/C/1H",
+        "year": 2025,
+        "question": "01.5",
+        "questionPaperId": "8464c1h-qp-jun25",
+        "markSchemeId": "8464c1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          6
+        ],
+        "markSchemePages": [
+          9
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-c1-02-3",
+      "topic": "5.5",
+      "specRefs": [
+        "5.5.1.1"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A student compares temperature rises for different masses of calcium oxide added to water. Why must the water volume and starting temperature be kept the same?",
+      "answer": [
+        "A different water volume changes the mass being heated, which affects temperature rise.",
+        "A different starting temperature changes heat loss to the surroundings.",
+        "Keeping both constant makes mass of calcium oxide the variable being compared."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/C/1H",
+        "year": 2025,
+        "question": "02.3",
+        "questionPaperId": "8464c1h-qp-jun25",
+        "markSchemeId": "8464c1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          8
+        ],
+        "markSchemePages": [
+          11
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-c1-03-2",
+      "topic": "5.1",
+      "specRefs": [
+        "5.1.1.4",
+        "5.1.1.7"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A particle has 12 protons, 12 neutrons and 10 electrons. Explain why it is an ion and state its charge.",
+      "answer": [
+        "It has two more protons than electrons, so its net charge is 2+.",
+        "An atom is neutral with equal numbers of protons and electrons; this particle is a positive ion."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/C/1H",
+        "year": 2025,
+        "question": "03.2",
+        "questionPaperId": "8464c1h-qp-jun25",
+        "markSchemeId": "8464c1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          10
+        ],
+        "markSchemePages": [
+          12
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-c1-03-4",
+      "topic": "5.2",
+      "specRefs": [
+        "5.2.2.4",
+        "5.1.2.6"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "Bromine boils at a higher temperature than chlorine. Explain this using their molecular structures.",
+      "answer": [
+        "Bromine molecules are larger and have stronger intermolecular forces.",
+        "More energy is needed to overcome these forces; the covalent bonds within the molecules are not broken during boiling."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/C/1H",
+        "year": 2025,
+        "question": "03.4",
+        "questionPaperId": "8464c1h-qp-jun25",
+        "markSchemeId": "8464c1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          11
+        ],
+        "markSchemePages": [
+          13
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-c1-04-2",
+      "topic": "5.4",
+      "specRefs": [
+        "5.4.3.3"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "An aluminium extraction plant dissolves aluminium oxide in molten cryolite. Explain how this reduces energy costs compared with melting aluminium oxide alone.",
+      "answer": [
+        "The mixture has a lower melting point than pure aluminium oxide.",
+        "Less energy is needed to reach and maintain the temperature needed for electrolysis."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/C/1H",
+        "year": 2025,
+        "question": "04.2",
+        "questionPaperId": "8464c1h-qp-jun25",
+        "markSchemeId": "8464c1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          15
+        ],
+        "markSchemePages": [
+          15
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-c1-05-4",
+      "topic": "5.4",
+      "specRefs": [
+        "5.4.2.4",
+        "5.4.2.5"
+      ],
+      "tier": "higher",
+      "kind": "application",
+      "question": "A strong acid and a weak acid have the same concentration in mol/dm³. Explain why the weak acid has the higher pH.",
+      "answer": [
+        "The weak acid only partially ionises in water, whereas the strong acid fully ionises.",
+        "The weak acid therefore has a lower hydrogen-ion concentration and a higher pH."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/C/1H",
+        "year": 2025,
+        "question": "05.4",
+        "questionPaperId": "8464c1h-qp-jun25",
+        "markSchemeId": "8464c1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          19
+        ],
+        "markSchemePages": [
+          18
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-c1-05-5",
+      "topic": "5.5",
+      "specRefs": [
+        "5.5.1.3"
+      ],
+      "tier": "higher",
+      "kind": "application",
+      "question": "For H₂ + Cl₂ → 2HCl, bond energies are H–H 436, Cl–Cl 242 and H–Cl 431 kJ/mol. Calculate the energy change and identify the reaction type.",
+      "answer": [
+        "Energy needed to break bonds = 436 + 242 = 678 kJ/mol.",
+        "Energy released making bonds = 2 × 431 = 862 kJ/mol.",
+        "ΔH = 678 − 862 = −184 kJ/mol; it is exothermic."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/C/1H",
+        "year": 2025,
+        "question": "05.5",
+        "questionPaperId": "8464c1h-qp-jun25",
+        "markSchemeId": "8464c1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          20
+        ],
+        "markSchemePages": [
+          18
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-c1-06-2",
+      "topic": "5.3",
+      "specRefs": [
+        "5.3.1.3"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "In open crucibles, heated magnesium gains mass but heated magnesium carbonate loses mass. Explain both changes without contradicting conservation of mass.",
+      "answer": [
+        "Magnesium combines with oxygen from the air, increasing the measured solid mass.",
+        "Magnesium carbonate releases carbon dioxide, which escapes and reduces the measured mass.",
+        "Total mass is conserved when the gases entering or leaving are included."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/C/1H",
+        "year": 2025,
+        "question": "06.2",
+        "questionPaperId": "8464c1h-qp-jun25",
+        "markSchemeId": "8464c1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          23
+        ],
+        "markSchemePages": [
+          19
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-c2-01-5",
+      "topic": "5.7",
+      "specRefs": [
+        "5.7.1.3"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "The same volume of a liquid hydrocarbon takes 40 s to flow through a tube at 20 °C and 18 s at 50 °C. What does this show about viscosity?",
+      "answer": [
+        "At the higher temperature it flows through the tube in less time, so its viscosity is lower.",
+        "Keep the volume and tube the same so the flow times can be compared."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/C/2H",
+        "year": 2025,
+        "question": "01.5",
+        "questionPaperId": "8464c2h-qp-jun25",
+        "markSchemeId": "8464c2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          5
+        ],
+        "markSchemePages": [
+          7
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-c2-02-6",
+      "topic": "5.9",
+      "specRefs": [
+        "5.9.3.1",
+        "5.9.3.2"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A power station burns the same amount of sulfur-containing fuel but releases less sulfur dioxide after new waste-gas cleaning equipment is fitted. Explain the improvement and one environmental benefit.",
+      "answer": [
+        "The equipment removes sulfur dioxide from the waste gases before they enter the atmosphere.",
+        "Less sulfur dioxide means less contribution to acid rain."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/C/2H",
+        "year": 2025,
+        "question": "02.6",
+        "questionPaperId": "8464c2h-qp-jun25",
+        "markSchemeId": "8464c2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          8
+        ],
+        "markSchemePages": [
+          11
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-c2-03-6",
+      "topic": "5.7",
+      "specRefs": [
+        "5.7.1.4"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A gas made by cracking a long-chain hydrocarbon turns bromine water from orange to colourless. What does this suggest about the gas, and why?",
+      "answer": [
+        "It contains an unsaturated hydrocarbon, such as an alkene, with a carbon–carbon double bond.",
+        "The alkene reacts with bromine, decolourising the bromine water."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/C/2H",
+        "year": 2025,
+        "question": "03.6",
+        "questionPaperId": "8464c2h-qp-jun25",
+        "markSchemeId": "8464c2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          12
+        ],
+        "markSchemePages": [
+          14
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-c2-04-5",
+      "topic": "5.6",
+      "specRefs": [
+        "5.6.1.4",
+        "5.6.2.4"
+      ],
+      "tier": "higher",
+      "kind": "application",
+      "question": "A reversible reaction is already at equilibrium. A catalyst is added at constant temperature. Predict the final product proportion and explain.",
+      "answer": [
+        "The equilibrium product proportion stays the same.",
+        "The catalyst speeds up both forward and reverse reactions; it does not shift the equilibrium position."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/C/2H",
+        "year": 2025,
+        "question": "04.5",
+        "questionPaperId": "8464c2h-qp-jun25",
+        "markSchemeId": "8464c2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          15
+        ],
+        "markSchemePages": [
+          15
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-c2-05-3",
+      "topic": "5.6",
+      "specRefs": [
+        "5.6.1.2",
+        "5.6.1.3"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "Diluting a sodium thiosulfate solution makes a cross take longer to disappear after acid is added. Explain the slower reaction at the same temperature.",
+      "answer": [
+        "There are fewer reacting particles per unit volume.",
+        "Collisions occur less frequently, so there are fewer successful collisions per second.",
+        "The particles do not have less average kinetic energy: the temperature is unchanged."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/C/2H",
+        "year": 2025,
+        "question": "05.3",
+        "questionPaperId": "8464c2h-qp-jun25",
+        "markSchemeId": "8464c2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          19
+        ],
+        "markSchemePages": [
+          18
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-c2-05-5",
+      "topic": "5.8",
+      "specRefs": [
+        "5.8.2.1"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A gas produced by a metal reacting with dilute acid does not relight a glowing splint. A student concludes that no gas formed. Explain the error and give the appropriate test.",
+      "answer": [
+        "A glowing splint tests for oxygen, not hydrogen.",
+        "Test a small sample with a burning splint: hydrogen burns with a squeaky pop."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/C/2H",
+        "year": 2025,
+        "question": "05.5",
+        "questionPaperId": "8464c2h-qp-jun25",
+        "markSchemeId": "8464c2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          21
+        ],
+        "markSchemePages": [
+          19
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-c2-05-6",
+      "topic": "5.6",
+      "specRefs": [
+        "5.6.1.1"
+      ],
+      "tier": "higher",
+      "kind": "application",
+      "question": "A tangent to a gas-volume curve at 60 s passes through (30 s, 18 cm³) and (90 s, 42 cm³). Calculate the reaction rate at 60 s.",
+      "answer": [
+        "The instantaneous rate is the gradient of the tangent, not volume divided by time from the origin.",
+        "Rate = (42 − 18)/(90 − 30) = 0.40 cm³/s."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/C/2H",
+        "year": 2025,
+        "question": "05.6",
+        "questionPaperId": "8464c2h-qp-jun25",
+        "markSchemeId": "8464c2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          22
+        ],
+        "markSchemePages": [
+          19
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-c2-06-3",
+      "topic": "5.10",
+      "specRefs": [
+        "5.10.1.4",
+        "5.10.2.2"
+      ],
+      "tier": "higher",
+      "kind": "application",
+      "question": "Waste circuit boards contain small amounts of metal. Describe how bioleaching can recover metal from this material.",
+      "answer": [
+        "Bacteria produce a leachate containing dissolved metal compounds.",
+        "The metal can then be recovered from the solution by displacement with a more reactive metal or by electrolysis."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/C/2H",
+        "year": 2025,
+        "question": "06.3",
+        "questionPaperId": "8464c2h-qp-jun25",
+        "markSchemeId": "8464c2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          25
+        ],
+        "markSchemePages": [
+          21
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-p1-02-3",
+      "topic": "6.1",
+      "specRefs": [
+        "6.1.1.3",
+        "6.1.2.1"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A student calculates c = E/(mΔθ) for an uninsulated heated block, using all the electrical energy as E. Explain why the calculated specific heat capacity is too high.",
+      "answer": [
+        "Some electrical energy heats the surroundings, so the measured temperature rise is smaller than it would be with no losses.",
+        "Using all the input energy with this smaller temperature rise overestimates c. Insulation reduces this error."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/P/1H",
+        "year": 2025,
+        "question": "02.3",
+        "questionPaperId": "8464p1h-qp-jun25",
+        "markSchemeId": "8464p1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          8
+        ],
+        "markSchemePages": [
+          11
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-p1-03-1",
+      "topic": "6.2",
+      "specRefs": [
+        "6.2.1.1",
+        "6.2.1.3"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "To find a resistor’s resistance, a student connects the ammeter in parallel and the voltmeter in series. State the corrections and calculation needed.",
+      "answer": [
+        "Put the ammeter in series with the resistor to measure its current.",
+        "Connect the voltmeter in parallel across the resistor to measure its potential difference.",
+        "Calculate R = V/I using readings from the same operating condition."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/P/1H",
+        "year": 2025,
+        "question": "03.1",
+        "questionPaperId": "8464p1h-qp-jun25",
+        "markSchemeId": "8464p1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          9
+        ],
+        "markSchemePages": [
+          12
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-p1-03-4",
+      "topic": "6.2",
+      "specRefs": [
+        "6.2.4.1"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A 1.0 kΩ resistor carries a maximum current of 0.020 A. Available power ratings are 0.25 W, 0.50 W and 1.0 W. Which ratings avoid exceeding their limits?",
+      "answer": [
+        "R = 1000 Ω; P = I²R = 0.020² × 1000 = 0.40 W.",
+        "Choose 0.50 W or 1.0 W. The 0.25 W rating is below the required power."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/P/1H",
+        "year": 2025,
+        "question": "03.4",
+        "questionPaperId": "8464p1h-qp-jun25",
+        "markSchemeId": "8464p1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          12
+        ],
+        "markSchemePages": [
+          13
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-p1-04-5",
+      "topic": "6.4",
+      "specRefs": [
+        "6.4.2.1"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A beta-emitting source is used to treat a small tumour. Why place it close to the tumour rather than far away inside the body?",
+      "answer": [
+        "Beta radiation has a limited range in tissue, so a nearby source can deliver radiation to the tumour.",
+        "A suitable position concentrates the treatment on cancer cells and reduces exposure of healthy tissue."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/P/1H",
+        "year": 2025,
+        "question": "04.5",
+        "questionPaperId": "8464p1h-qp-jun25",
+        "markSchemeId": "8464p1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          15
+        ],
+        "markSchemePages": [
+          15
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-p1-04-6",
+      "topic": "6.4",
+      "specRefs": [
+        "6.4.2.1",
+        "6.4.2.3",
+        "6.4.2.4"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A treatment implant has a short half-life. Suggest why doctors might leave it in place once treatment ends rather than operate to remove it.",
+      "answer": [
+        "Its activity soon falls to a low level as the nuclei decay.",
+        "If the risk of removal surgery exceeds the remaining radiation risk, leaving it in place may be safer."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/P/1H",
+        "year": 2025,
+        "question": "04.6",
+        "questionPaperId": "8464p1h-qp-jun25",
+        "markSchemeId": "8464p1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          15
+        ],
+        "markSchemePages": [
+          15
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-p1-05-5",
+      "topic": "6.2",
+      "specRefs": [
+        "6.2.4.1",
+        "6.2.4.2",
+        "6.1.1.4"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A charger supplies 80 W while a device uses 50 W. Its empty battery must store 216 kJ. Calculate charging time in hours, assuming no other energy losses.",
+      "answer": [
+        "Power charging the battery = 80 − 50 = 30 W.",
+        "t = E/P = 216 000/30 = 7200 s.",
+        "7200/3600 = 2.0 hours."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/P/1H",
+        "year": 2025,
+        "question": "05.5",
+        "questionPaperId": "8464p1h-qp-jun25",
+        "markSchemeId": "8464p1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          19
+        ],
+        "markSchemePages": [
+          17
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-p1-06-1",
+      "topic": "6.3",
+      "specRefs": [
+        "6.3.1.1",
+        "6.1.1.2"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "An energy store lifts a solid cube of side 2.0 m and density 2500 kg/m³ through 10 m. Calculate the gain in gravitational potential energy. Use g = 10 N/kg.",
+      "answer": [
+        "Volume = 2.0³ = 8.0 m³; mass = ρV = 2500 × 8.0 = 20 000 kg.",
+        "ΔEₚ = mgΔh = 20 000 × 10 × 10 = 2.0 × 10⁶ J."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/P/1H",
+        "year": 2025,
+        "question": "06.1",
+        "questionPaperId": "8464p1h-qp-jun25",
+        "markSchemeId": "8464p1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          21
+        ],
+        "markSchemePages": [
+          18
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-p1-06-3",
+      "topic": "6.1",
+      "specRefs": [
+        "6.1.2.2"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A lifting-and-lowering energy store uses 120 kJ of electrical input and returns 90 kJ of electrical output. Calculate efficiency and explain where the rest of the energy goes.",
+      "answer": [
+        "Efficiency = useful output / total input = 90/120 = 0.75 = 75%.",
+        "30 kJ is dissipated, mainly to thermal stores by friction and electrical resistance; it is not destroyed."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/P/1H",
+        "year": 2025,
+        "question": "06.3",
+        "questionPaperId": "8464p1h-qp-jun25",
+        "markSchemeId": "8464p1h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          22
+        ],
+        "markSchemePages": [
+          19
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-p2-01-6",
+      "topic": "6.5",
+      "specRefs": [
+        "6.5.4.2.3"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A rope pulls a trolley forwards with 60 N while friction acts backwards with 60 N. Is friction the Newton’s Third Law partner to the rope’s pull? Explain.",
+      "answer": [
+        "No. The partner is the trolley pulling backwards on the rope with 60 N.",
+        "Third-law partners act on different objects; friction and rope tension here both act on the trolley."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/P/2H",
+        "year": 2025,
+        "question": "01.6",
+        "questionPaperId": "8464p2h-qp-jun25",
+        "markSchemeId": "8464p2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          5
+        ],
+        "markSchemePages": [
+          7
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-p2-02-2",
+      "topic": "6.5",
+      "specRefs": [
+        "6.5.4.3.1",
+        "6.5.4.3.2",
+        "6.5.4.3.3"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "A car gets new tyres while its speed and driver reaction time stay unchanged. Explain which parts of its stopping distance may change.",
+      "answer": [
+        "Thinking distance is unchanged because speed and reaction time are unchanged.",
+        "If the new tyres provide greater grip, braking distance decreases, reducing total stopping distance."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/P/2H",
+        "year": 2025,
+        "question": "02.2",
+        "questionPaperId": "8464p2h-qp-jun25",
+        "markSchemeId": "8464p2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          7
+        ],
+        "markSchemePages": [
+          9
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-p2-02-3",
+      "topic": "6.5",
+      "specRefs": [
+        "6.5.4.3.4",
+        "6.1.1.2"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "Two identical cars stop over the same braking distance, but one starts faster. Explain why the faster car’s brakes are at greater risk of overheating.",
+      "answer": [
+        "The faster car starts with more kinetic energy, so the brakes must do more work to stop it.",
+        "More energy is transferred to thermal stores, increasing the risk of overheating."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/P/2H",
+        "year": 2025,
+        "question": "02.3",
+        "questionPaperId": "8464p2h-qp-jun25",
+        "markSchemeId": "8464p2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          8
+        ],
+        "markSchemePages": [
+          10
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-p2-03-4",
+      "topic": "6.6",
+      "specRefs": [
+        "6.6.1.2"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "Visible light has frequency 5.0 × 10¹⁴ Hz and travels at 3.0 × 10⁸ m/s. Calculate wavelength in nanometres.",
+      "answer": [
+        "λ = v/f = (3.0 × 10⁸)/(5.0 × 10¹⁴) = 6.0 × 10⁻⁷ m.",
+        "Multiply by 10⁹ to convert metres to nanometres: 600 nm."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/P/2H",
+        "year": 2025,
+        "question": "03.4",
+        "questionPaperId": "8464p2h-qp-jun25",
+        "markSchemeId": "8464p2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          10
+        ],
+        "markSchemePages": [
+          11
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-p2-03-5",
+      "topic": "6.6",
+      "specRefs": [
+        "6.6.2.2"
+      ],
+      "tier": "higher",
+      "kind": "application",
+      "question": "A straight wavefront enters glass obliquely from air. Explain why its direction changes when light travels more slowly in the glass.",
+      "answer": [
+        "One end enters the glass and slows before the other end.",
+        "This changes the wavefront’s direction, so the ray refracts towards the normal."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/P/2H",
+        "year": 2025,
+        "question": "03.5",
+        "questionPaperId": "8464p2h-qp-jun25",
+        "markSchemeId": "8464p2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          11
+        ],
+        "markSchemePages": [
+          12
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-p2-04-3",
+      "topic": "6.7",
+      "specRefs": [
+        "6.7.2.2",
+        "6.7.2.3"
+      ],
+      "tier": "higher",
+      "kind": "application",
+      "question": "A rectangular coil carries current in a magnetic field. Its two opposite sides carry current in opposite directions. Explain why it can begin to rotate.",
+      "answer": [
+        "The current’s magnetic field interacts with the external magnetic field, producing a force on each side.",
+        "The opposite current directions produce forces in opposite directions.",
+        "With the coil positioned so these forces act on opposite sides of the axle, they produce a turning effect."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/P/2H",
+        "year": 2025,
+        "question": "04.3",
+        "questionPaperId": "8464p2h-qp-jun25",
+        "markSchemeId": "8464p2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          16,
+          17
+        ],
+        "markSchemePages": [
+          14
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-p2-05-2",
+      "topic": "6.6",
+      "specRefs": [
+        "6.6.2.2"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "Repeated readings from a temperature probe range from −0.4 °C to +0.8 °C. Estimate uncertainty using half the range, showing your working.",
+      "answer": [
+        "Range = 0.8 − (−0.4) = 1.2 °C.",
+        "Uncertainty = ±(1.2/2) = ±0.6 °C."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/P/2H",
+        "year": 2025,
+        "question": "05.2",
+        "questionPaperId": "8464p2h-qp-jun25",
+        "markSchemeId": "8464p2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          19
+        ],
+        "markSchemePages": [
+          15
+        ]
+      }
+    },
+    {
+      "id": "application-8464-2025-p2-05-5",
+      "topic": "6.6",
+      "specRefs": [
+        "6.6.2.2"
+      ],
+      "tier": "all",
+      "kind": "application",
+      "question": "Identical black and white blocks are heated by infrared radiation. The black block initially warms faster; later each reaches a steady temperature. Explain these observations.",
+      "answer": [
+        "A black surface absorbs infrared radiation more effectively than a white surface.",
+        "As each block warms, its rate of infrared emission increases.",
+        "At steady temperature its total energy-loss rate equals its absorption rate, so its thermal store no longer increases."
+      ],
+      "examSource": {
+        "qualification": "8464",
+        "paper": "8464/P/2H",
+        "year": 2025,
+        "question": "05.5",
+        "questionPaperId": "8464p2h-qp-jun25",
+        "markSchemeId": "8464p2h-ms-jun25",
+        "note": "Original practice scenario informed by this question and mark scheme; numbers or context may differ.",
+        "questionPages": [
+          23
+        ],
+        "markSchemePages": [
+          16
+        ]
+      }
     }
   ],
   "specification": {

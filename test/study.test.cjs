@@ -18,7 +18,7 @@ test('application opt-in and tier filters combine without altering source cards'
 test('new application scenarios cite Combined content and analysed exam questions',()=>{
  const manifest=require('../docs/pdf-analysis.json');assert.equal(manifest.length,25);assert.equal(manifest.reduce((s,f)=>s+f.pages,0),952);
  assert.ok(manifest.every(f=>f.accessible&&f.analysis==='analysed-text-and-context'&&f.pageStatus.every(p=>p.rendered)));
- const cards=deck.cards.filter(c=>c.examSource);assert.equal(cards.length,24);
+ const cards=deck.cards.filter(c=>c.examSource?.qualification==='8461'||c.examSource?.qualification==='8462'||c.examSource?.qualification==='8463');assert.equal(cards.length,24);
  for(const card of cards){assert.equal(card.kind,'application');assert.ok(manifest.some(f=>f.path.includes(card.examSource.paper)&&f.path.includes(`JUN${String(card.examSource.year).slice(-2)}`)));}
 });
 test('application-only mode excludes every core/practical card and migrates legacy settings',()=>{

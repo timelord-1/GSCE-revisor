@@ -32,7 +32,7 @@ async function createWindow() {
       if (data.history.length !== 1 || data.progress['4.1-01'].phase !== 'learning') throw new Error('Rating was not saved');
       document.querySelector('#end-session').click();
       document.querySelector('#card-library').click();
-      if (!document.querySelector('#library-count').textContent.includes('641 matching cards')) throw new Error('Full library did not load');
+      if (!document.querySelector('#library-count').textContent.includes(DECK.cards.length + ' matching cards')) throw new Error('Full library did not load');
       document.querySelector('#create-card').click();
       document.querySelector('#card-front').value = 'Smoke personal application question?';
       document.querySelector('#card-back').value = 'A personal answer point.';

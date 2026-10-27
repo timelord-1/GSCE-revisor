@@ -3,6 +3,7 @@ const { spawn } = require('child_process');
 const assert = require('node:assert/strict');
 const fs = require('fs');
 const path = require('path');
+const builtInCount = require('../src/deck').cards.length;
 (async () => {
  const server=spawn(process.execPath,[path.join(__dirname,'serve.cjs')],{stdio:'pipe'});
  let browser;
@@ -28,7 +29,7 @@ const path = require('path');
   await page.locator('#close-dialog').click();
   await page.locator('#scope').click();
   const coverage=await page.locator('#dialog-body').innerText();
-  assert.match(coverage,/641/);assert.match(coverage,/225/);assert.match(coverage,/Audited against/);assert.doesNotMatch(coverage,/verification is pending/);
+  assert.ok(coverage.includes(String(builtInCount)));assert.match(coverage,/225/);assert.match(coverage,/Audited against/);assert.doesNotMatch(coverage,/verification is pending/);
   await page.locator('#close-dialog').click();
   for(const [subject,counts] of [['Biology',[4,3]],['Chemistry',[5,5]],['Physics',[4,3]]]){
    await page.locator(`[data-subject="${subject}"]`).click();
@@ -131,10 +132,15 @@ const path = require('path');
   await page.locator('#settings').click();assert.equal(await page.locator('#study-mode').inputValue(),'core');await page.locator('#close-dialog').click();
   await page.setViewportSize({width:1280,height:900});
   await page.locator('#card-library').click();
-  assert.match(await page.locator('#library-count').innerText(),/641 matching cards/);
+  assert.ok((await page.locator('#library-count').innerText()).includes(`${builtInCount} matching cards`));
   let browsed=0;
   while(true){browsed+=await page.locator('.library-card').count();if(await page.locator('#library-next').isDisabled())break;await page.locator('#library-next').click();}
-  assert.equal(browsed,641);
+  assert.equal(browsed,builtInCount);
+  await page.locator('#library-search').fill('A new vaccine stimulates antibody');
+  await page.locator('[data-view-library="application-8464-2025-b1-02-4"]').click();
+  assert.match(await page.locator('#dialog-body').innerText(),/8464\/B\/1H June 2025 Q02\.4/);
+  assert.equal(await page.locator('.library-answer li').count(),2);
+  await page.locator('#back-library').click();
   await page.locator('#library-search').fill('eukaryotic');await page.locator('[data-edit-card="4.1-01"]').click();
   await page.locator('#card-front').fill('My edited eukaryotic question?');await page.locator('#card-back').fill('My own answer point.');await page.locator('#save-card').click();
   assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('trilogy-revision-v1')).progress),saved.progress);

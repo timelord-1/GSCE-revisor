@@ -64,3 +64,7 @@ All 25 PDFs in `Application questions` were accessible before flashcard edits: 9
 ## Version 1.2.0 personal study
 
 The built-in deck and reference audit are unchanged. Users can now browse every card, save personal edits or create personal cards, and build scheduled study selections. Personal content is clearly labelled; it is not claimed to have passed the specification audit. Original card IDs and source references are preserved. Application-only mode uses explicit card types, never question-text heuristics.
+
+## 27 October 2026 application expansion
+
+48 original application cards were added after checking all 72 bundled PDFs (1,915 pages) and reviewing selected June 2025 Higher questions and matching marking points in three subject batches. The deck now has 689 cards, including 91 application questions. All 641 earlier cards are unchanged. Every new card has precise specification references, source document IDs, question numbers and PDF pages. See [scope, tier decisions and card inventory](APPLICATION-EXPANSION.md) and [file/batch status](application-expansion.json). The regenerated specification map includes all new card IDs; no new separate-science content was introduced.
