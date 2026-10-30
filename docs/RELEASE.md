@@ -1,16 +1,14 @@
-## Trilogy Revision 1.4.0
+## Trilogy Revision 1.5.0
 
-Adds **48 original application questions**, eight for each subject/paper, informed by the June 2025 AQA Combined Science Trilogy papers and matching mark schemes.
+Adds a **native Linux Mint download**, so the app can run directly without Wine.
 
-- **689 cards total, including 91 application cards**, covering all 24 topics.
-- Concise marking points for explanations, calculations, experimental improvements and balanced judgements. All scenarios are self-contained; no missing graphs or diagrams are required.
-- Each new card includes precise Combined Science specification references and its source paper/question. Higher-only content is filtered correctly.
-- Find them in Browse & edit all cards, or select Settings → Question mode → Application questions only. They can be selected for custom decks and study plans.
-- The original 641 cards and IDs are unchanged, preserving schedules, personal edits and custom selections.
-- The 72-paper offline library is retained.
+- **Linux:** `Trilogy-Revision-1.5.0-Linux-x64.deb` for 64-bit Intel/AMD Debian/Ubuntu-based desktops, including Linux Mint. Install by double-clicking the file in Mint, or run `sudo apt install ./Trilogy-Revision-1.5.0-Linux-x64.deb`. Launch Trilogy Revision from the applications menu.
+- **Windows:** `Trilogy-Revision-1.5.0-Windows-x64.exe` remains available.
+- Linux respects desktop scaling and selects the native X11/Wayland backend. Explicit command-line backend choices are retained. No fixed scale factor or global sandbox bypass is added.
+- All 689 cards, 91 application questions, custom cards/plans and 72 offline PDFs are retained.
 
-The sources were checked before changing cards: 72 accessible PDFs, 1,915 pages extracted and rendered, no failed documents. This update reviews selected questions in 12 June 2025 PDFs; it does not claim a fresh semantic review of every 2023–2025 paper. Review batches and page references are recorded in docs/APPLICATION-EXPANSION.md and docs/application-expansion.json.
+**Moving from Wine:** export a JSON backup from Settings in the old app, then import it in the Linux app. Native Linux and Wine store progress separately; there is no automatic migration.
 
-Run `Trilogy-Revision-1.4.0-Windows-x64.exe` on Windows 10 or later (x64). The executable is portable and unsigned. `SHA256SUMS.txt` and `PAPER-VERIFICATION.json` accompany the download. Browser, unit/content, PDF and packaged Windows checks must pass before publication.
+Linux packages are installed and exercised on Ubuntu 24.04, including fractional (125%) and HiDPI (200%) rendering-scale checks, flashcard review, card editing/plans and opening a bundled PDF. Windows also has a packaged-app smoke test. Unit/content, PDF and browser checks must pass before either download is published. `SHA256SUMS.txt` covers both packages.
 
-Practice questions are independently authored, not official AQA mark schemes or a guarantee of marks. AQA retains copyright in its original PDFs.
+Running natively removes Wine’s rendering layer, but it cannot guarantee sharper text on every Mint display configuration. X11 fractional desktop scaling can still introduce blur. The release has not been tested on the user’s laptop or a Linux Mint desktop. See README.md for display and backup instructions.

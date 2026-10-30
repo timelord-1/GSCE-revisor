@@ -6,9 +6,21 @@ An offline desktop revision app for **AQA GCSE Combined Science: Trilogy (8464)*
 
 ## Download and run
 
-Download `Trilogy-Revision-1.4.0-Windows-x64.exe` from this repository's **Releases** page when the release build has completed. It is a portable Windows x64 executable: run it without installing Node.js or other dependencies. The application is unsigned; no signing certificate has been supplied. It requires a supported Windows version compatible with Electron (Windows 10 or later).
+Download a package from this repository’s **Releases** page:
 
-The release workflow builds on Windows and uploads the executable and a SHA-256 checksum. An executable produced locally on Linux is also available in the development environment's `dist/` directory. **Building the Windows artifact does not establish that it has been run on Windows.** See the release status in GitHub Actions; an unfinished or failed workflow does not mean an uploaded release exists.
+- **Linux Mint (64-bit Intel/AMD):** `Trilogy-Revision-1.5.0-Linux-x64.deb`. This is a native Linux app; Wine is not needed. Double-click it to install with Mint’s package installer, then open **Trilogy Revision** from the applications menu. Alternatively, from the download directory:
+
+  ```sh
+  sudo apt install ./Trilogy-Revision-1.5.0-Linux-x64.deb
+  ```
+
+- **Windows 10 or later (x64):** `Trilogy-Revision-1.5.0-Windows-x64.exe`. Portable, unsigned executable; no Node.js installation required.
+
+**Moving from Wine:** export a backup in the old app’s Settings, then import that JSON backup in the native Linux app. Wine and native Linux keep separate profiles; copying the executable does not move your progress, personal cards or plans. Native Linux data normally lives in `~/.config/Trilogy Revision`.
+
+The Linux app uses the desktop’s native X11/Wayland backend and respects display scaling. This avoids Wine’s extra rendering layer, which may cause fuzzy text. If text still looks soft, compare with 100% or 200% scaling in Mint’s Display settings; fractional scaling under X11 may still rescale application windows. Advanced Wayland users can test `trilogy-revision --ozone-platform=wayland`. No display scale is forced by the app.
+
+Both packages contain all 689 cards and 72 PDFs for offline use. The release workflow tests Windows and installs/tests the `.deb` on Ubuntu 24.04 at 125% and 200% display scale before publishing both packages with SHA-256 checksums. Linux Mint itself and your laptop’s display are not available to the automated tests.
 
 ## Past papers
 
@@ -97,20 +109,21 @@ npm run papers:check
 npm test          # scheduler, backup validation, source coverage, tier and scope checks
 npm run test:ui   # browser interaction, persistence, backup round-trip, responsive layout
 npm run build:win
+npm run build:linux # builds a native amd64 .deb on Linux
 ```
 
 `test:ui` uses `/usr/bin/chromium` by default on Linux. Set `CHROMIUM_PATH` for another Chromium binary. Alternatively install Playwright Chromium with `npx playwright install chromium`. The Windows portable build uses electron-builder/NSIS. Electron 44 downloads its development binary lazily; `npm run setup` prepares it explicitly and respects the environment HTTPS proxy. Build and download caches are directed to the system temporary directory so cloud read-only home directories do not break the build. Package TLS and checksum verification are retained.
 
-The packaged renderer uses a restrictive content-security policy, sandboxing, no Node integration, no external navigation and denied permission requests. The app has no native package dependencies.
+The packaged renderer uses a restrictive content-security policy, sandboxing, no Node integration, no external navigation and denied permission requests. The app has no native Node add-ons; the Debian package declares its Linux library dependencies.
 
 ## Publish a release
 
-Pushing a `v*` tag triggers `.github/workflows/release.yml` on GitHub. It runs the unit checks, builds a Windows x64 portable executable and publishes it with a checksum using the repository-scoped Actions `GITHUB_TOKEN` and `contents: write`. It exercises the packaged app on Windows before publication and can also be run manually for an existing tag.
+Pushing a `v*` tag triggers `.github/workflows/release.yml` on GitHub. It runs the unit checks, builds a Windows x64 portable executable and a native Linux x64 Debian package, and publishes both with checksums using the repository-scoped Actions `GITHUB_TOKEN` and `contents: write`. It exercises the packaged Windows app and installed Linux app before publication and can also be run manually for an existing tag.
 
 ```sh
-git tag -a v1.4.0 -m "Trilogy Revision 1.4.0"
+git tag -a v1.5.0 -m "Trilogy Revision 1.5.0"
 git push origin main
-git push origin v1.4.0
+git push origin v1.5.0
 ```
 
 Do not claim publication until the release and its assets are visible on GitHub. If Actions is disabled or organisation policy restricts release writes, enable the workflow's permissions or upload the already-built executable through Releases.

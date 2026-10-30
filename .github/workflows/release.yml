@@ -1,13 +1,13 @@
-name: Build and publish Windows release
+name: Build and publish desktop release
 on:
   push:
     tags: ['v*']
   workflow_dispatch:
     inputs:
       tag:
-        description: Existing release tag (for example v1.0.0)
+        description: Existing release tag
         required: true
-        default: v1.4.0
+        default: v1.5.0
 permissions:
   contents: write
 jobs:
@@ -36,14 +36,14 @@ jobs:
         run: |
           export CHROMIUM_PATH="$(node -e 'process.stdout.write(require("@playwright/test").chromium.executablePath())')"
           npm run test:ui
-  windows-release:
+  windows-build:
     needs: browser-tests
     runs-on: windows-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
           ref: ${{ inputs.tag || github.ref }}
-          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
@@ -53,7 +53,6 @@ jobs:
           python-version: '3.12'
       - run: npm ci
       - run: npm run papers:download
-      - run: npm run papers:check
       - run: python -m pip install PyMuPDF==1.26.6
       - run: python scripts/verify-past-papers.py
       - run: npm test
@@ -64,30 +63,66 @@ jobs:
           $process = Start-Process -FilePath "dist/win-unpacked/Trilogy Revision.exe" -ArgumentList "--smoke-test" -PassThru
           if (-not $process.WaitForExit(45000)) { $process.Kill(); throw "Desktop smoke test timed out" }
           if ($process.ExitCode -ne 0) { throw "Desktop smoke test failed with exit code $($process.ExitCode)" }
-      - name: Record checksum
-        shell: pwsh
-        run: |
-          $file = Get-ChildItem dist/Trilogy-Revision-*-Windows-x64.exe | Select-Object -First 1
-          $hash = (Get-FileHash $file.FullName -Algorithm SHA256).Hash.ToLower()
-          "$hash  $($file.Name)" | Set-Content -Encoding ascii dist/SHA256SUMS.txt
       - uses: actions/upload-artifact@v4
         with:
-          name: windows-executable
+          name: windows-package
+          if-no-files-found: error
           path: |
             dist/Trilogy-Revision-*-Windows-x64.exe
-            dist/SHA256SUMS.txt
             dist/PAPER-VERIFICATION.json
-      - name: Publish executable in Releases
-        shell: pwsh
+  linux-build:
+    needs: browser-tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag || github.ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run papers:download
+      - run: npm test
+      - run: npm run build:linux
+      - name: Install the native Debian package
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb xauth libgbm1 ./dist/Trilogy-Revision-*-Linux-x64.deb
+          dpkg-query -W trilogy-revision
+          test -x /usr/bin/trilogy-revision
+      - name: Exercise the installed Linux app and fractional display scaling
+        run: |
+          timeout 45s xvfb-run -a --server-args="-screen 0 1920x1440x24" trilogy-revision --smoke-test --force-device-scale-factor=1.25
+          timeout 45s xvfb-run -a --server-args="-screen 0 2560x1800x24" trilogy-revision --smoke-test --force-device-scale-factor=2
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux-package
+          if-no-files-found: error
+          path: dist/Trilogy-Revision-*-Linux-x64.deb
+  publish:
+    needs: [windows-build, linux-build]
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag || github.ref }}
+          fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: '*-package'
+          path: dist
+          merge-multiple: true
+      - name: Record checksums and publish both tested packages
+        working-directory: dist
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
         run: |
-          $asset = (Get-ChildItem dist/Trilogy-Revision-*-Windows-x64.exe | Select-Object -First 1).FullName
-          gh release view "$env:RELEASE_TAG" *> $null
-          if ($LASTEXITCODE -eq 0) {
-            gh release upload "$env:RELEASE_TAG" "$asset" dist/SHA256SUMS.txt dist/PAPER-VERIFICATION.json --clobber
-          } else {
-            gh release create "$env:RELEASE_TAG" "$asset" dist/SHA256SUMS.txt dist/PAPER-VERIFICATION.json --verify-tag --title "Trilogy Revision $env:RELEASE_TAG" --notes-file docs/RELEASE.md
-          }
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          sha256sum -- *.exe *.deb > SHA256SUMS.txt
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            gh release upload "$RELEASE_TAG" ./*.exe ./*.deb SHA256SUMS.txt PAPER-VERIFICATION.json --clobber
+          else
+            gh release create "$RELEASE_TAG" ./*.exe ./*.deb SHA256SUMS.txt PAPER-VERIFICATION.json --verify-tag --title "Trilogy Revision $RELEASE_TAG" --notes-file ../docs/RELEASE.md
+          fi

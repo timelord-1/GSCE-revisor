@@ -3,6 +3,11 @@ const path = require('path');
 const {registerPaperWindows} = require('./paper-windows.cjs');
 let mainWindow;
 app.setName('Trilogy Revision');
+if (process.platform === 'linux') {
+  app.setDesktopName('trilogy-revision.desktop');
+  // Use the desktop's native display backend; retain explicit user overrides.
+  if (!app.commandLine.hasSwitch('ozone-platform')) app.commandLine.appendSwitch('ozone-platform', 'auto');
+}
 const smokeTest = process.argv.includes('--smoke-test');
 async function createWindow() {
   const window = new BrowserWindow({
@@ -21,6 +26,9 @@ async function createWindow() {
   window.webContents.on('will-navigate', event => event.preventDefault());
   await window.loadFile(path.join(__dirname, 'index.html'));
   if (smokeTest) {
+    const expectedScale = Number(app.commandLine.getSwitchValue('force-device-scale-factor'));
+    const actualScale = await window.webContents.executeJavaScript('window.devicePixelRatio');
+    if (expectedScale > 0 && Math.abs(actualScale - expectedScale) > 0.01) throw new Error('Display scale was not respected');
     const result = await window.webContents.executeJavaScript(`(async () => {
       if (document.querySelectorAll('.topic-card').length !== 4) throw new Error('Topics did not load');
       document.querySelector('#start-review').click();

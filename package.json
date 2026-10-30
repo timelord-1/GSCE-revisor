@@ -1,6 +1,6 @@
 {
   "name": "trilogy-revision",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Offline AQA GCSE Combined Science Trilogy flashcards with spaced repetition",
   "main": "src/main.cjs",
   "author": "timelord-1",
@@ -14,7 +14,8 @@
     "setup": "node scripts/prepare.cjs",
     "content:report": "node scripts/content-report.cjs",
     "papers:download": "node scripts/download-papers.cjs",
-    "papers:check": "node scripts/check-papers.cjs"
+    "papers:check": "node scripts/check-papers.cjs",
+    "build:linux": "node scripts/build.cjs linux"
   },
   "devDependencies": {
     "electron": "44.7.0",
@@ -37,6 +38,17 @@
     },
     "portable": {
       "artifactName": "Trilogy-Revision-${version}-Windows-x64.exe"
+    },
+    "linux": {
+      "target": [
+        "deb"
+      ],
+      "executableName": "trilogy-revision",
+      "maintainer": "timelord-1 <timelord-1@users.noreply.github.com>",
+      "category": "Education",
+      "artifactName": "Trilogy-Revision-${version}-Linux-x64.${ext}",
+      "syncDesktopName": true
     }
-  }
+  },
+  "desktopName": "trilogy-revision.desktop"
 }
